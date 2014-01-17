@@ -1,0 +1,24 @@
+After updating Edge animation, if needed external script is to interact with Edge:
+Replace below lines in the last few lines of compname_edge.js to avoid jQUery conflict with Edge.
+Replace "compname" with the name of the composition class.
+
+Replace below:
+/**
+ * Adobe Edge DOM Ready Event Handler
+ */
+$(window).ready(function() {
+     Edge.launchComposition(compId);
+});
+})(jQuery, AdobeEdge, "compname");
+
+
+With:
+/**
+ * Adobe Edge DOM Ready Event Handler
+ */
+jQuery.noConflict();
+
+jQuery(window).ready(function() {
+     Edge.launchComposition(compId);
+});
+})(jQuery, AdobeEdge, "compname");

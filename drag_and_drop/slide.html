@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">
+
+<title>Drag and drop</title>
+
+<!-- FOR SOME UNKNOWN REASON THE SCROLL POSITION IS ALREADY OFFESET ON SCROLLED PAGES ON GALAXY TAB BUT NOT ON DESKTOP BROWSER -->
+<script charset="utf-8" src="../global_assets/lib/draganddrop/draganddrop.js"></script>
+<link href="../global_assets/lib/draganddrop/draganddrop.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+/*style*/
+body {background: none;}
+.colLeft{
+	width: 35%;
+	float:left;
+	position: relative;
+}
+.colRight {
+	float:left;
+	margin-left: 30px;
+	position: relative;
+}
+.tick.tLeft {
+	position: absolute;
+	left: -22px;
+	top: 5px;
+}
+.tick.tRight {
+	position: absolute;
+	left: 85px;
+	top: 5px;
+}
+.dragMe {
+	float:left;
+	margin: 5px;
+}
+.dropHere {
+	position: absolute !important;
+}
+</style>
+
+<script type="text/javascript">
+function correct (id) {
+	$(id).find(".tick").show();
+	//play sfx
+}
+function incorrect () {
+	//play sfx
+	console.log("wrong!")
+}
+function completed (obj) {
+	//obj.find(".completion").html("Completed!");
+	obj.find(".completion").css("visibility", "visible");
+}
+function allComplete () {
+	console.log("All done, next!");
+	enableScroll();	
+}
+
+function initDragDrop(sym) {
+	dragdrop.quiz_load(sym);
+}
+
+$(document).ready (function () {
+	//dom ready
+	//enableDebug();
+});
+
+$(window).load(function() {
+	//everything loaded including images
+	$(".tick").hide();
+	$("#dragdrop .completion").css("visibility", "hidden");
+	$("#dragdrop2 .completion").css("visibility", "hidden");
+	
+	//debugMsg("test");
+	disableScroll();
+	initDragDrop("#dragdrop");
+	initDragDrop("#dragdrop2");
+	
+});
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="content">
+		<div id="dragdrop">
+			<div class="colLeft">
+				<span class="actionsHL">Drag</span> and <span class="actionsHL">drop</span> the Section members to the correct positions during a dismounted operation.
+				<div style="margin:20px auto 0 auto; width:250px; border:0px solid black; text-align:center;">
+					<div class="dragMe roundedcorner" data-ans="1">Drag 1</div>
+					<div class="dragMe roundedcorner" data-ans="2">Drag 2</div>
+					<div class="dragMe roundedcorner" data-ans="*">Drag anywhere*</div>
+					<div class="dragMe roundedcorner" data-ans="abc">Drag abc</div>
+					<div class="dragMe roundedcorner" data-ans="1">Drag 1</div>
+					<div class="dragMe roundedcorner" data-ans="4">Drag 4</div>
+					<div class="dragMe roundedcorner" data-ans="5">Drag 5</div>
+				</div>
+			</div>
+			<div class="colRight">
+				<img src="images/bgactivity1.jpg">
+				<div style="position:absolute; top:0px; border:0px solid green; width:100%; height:100%;">
+					<div style="left:200px; top:165px;" class="dropHere innershadow roundedcorner" data-ans="1"><div class="tick tLeft"></div></div>
+					<div style="left:185px; top:225px;" class="dropHere innershadow roundedcorner" data-ans="*"><div class="tick tLeft"></div>*</div>
+					<div style="left:160px; top:295px;" class="dropHere innershadow roundedcorner" data-ans="3"><div class="tick tLeft"></div></div>
+					<div style="left:400px; top:175px;" class="dropHere innershadow roundedcorner" data-ans="abc"><div class="tick tRight"></div></div>
+					<div style="left:400px; top:210px;" class="dropHere innershadow roundedcorner" data-ans="1"><div class="tick tRight"></div></div>
+					<div style="left:410px; top:270px;" class="dropHere innershadow roundedcorner" data-ans="4"><div class="tick tRight"></div></div>
+					<div style="left:430px; top:335px;" class="dropHere innershadow roundedcorner" data-ans="5"><div class="tick tRight"></div></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="completion">Complete!</div>
+		</div>
+		<div id="dragdrop2" style="margin-top:-30px;">
+			<div class="colLeft">
+				<div style="margin:20px auto 0 auto; width:250px; border:0px solid black; text-align:center;">
+					<div class="dragMe roundedcorner" data-ans="1">Drag 1</div>
+					<div class="dragMe roundedcorner" data-ans="2">Drag 2</div>
+					<div class="dragMe roundedcorner" data-ans="*">Drag anywhere*</div>
+					<div class="dragMe roundedcorner" data-ans="abc">Drag abc</div>
+				</div>
+			</div>
+			<div class="colRight">
+				<div style="position:absolute; top:0px; border:0px solid green; width:100%; height:100%;">
+					<div style="left:200px; top:35px;" class="dropHere innershadow roundedcorner" data-ans="1"><div class="tick tLeft"></div></div>
+					<div style="left:185px; top:70px;" class="dropHere innershadow roundedcorner" data-ans="*"><div class="tick tLeft"></div>*</div>
+					<div style="left:20px; top:20px;" class="dropHere innershadow roundedcorner" data-ans="3"><div class="tick tLeft"></div></div>
+					<div style="left:400px; top:0px;" class="dropHere innershadow roundedcorner" data-ans="abc"><div class="tick tRight"></div></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="completion">Complete!</div>
+		</div>
+		<!--shows the tick symbol-->
+		<!--asd<span class="tick"></span> 234<span class="tickheavy"></span>-->
+	</div>
+</div>
+<!--<div id="dragdrop_debug" style="position:absolute; right:0px; top:0px; max-height:300px; width:300px; overflow:auto; background:#fff; border:1px solid black; padding:5px;"></div>-->
+<div style="height:500px; background:#ccc; color:white; padding:10px; margin-top:30px;"><br><br>Take up some space below...</div>
+</body>
+</html>
+	

@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+<script charset="utf-8" src="../global_assets/lib/jquery.easing.js"></script>
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">
+
+<title>Page title</title>
+
+<style type="text/css">
+/*style*/
+</style>
+
+<script type="text/javascript">
+$(document).ready (function () {
+	//dom ready
+	//playAudio("audio/filename.mp3");
+});
+$(window).load(function() {
+	//everything loaded including images
+
+	//do something on Edge Animation at the start
+	/*AdobeEdge.bootstrapCallback(function(compId) {
+		var myComp =  AdobeEdge.getComposition(compId);
+		myComp.getStage().play();
+		console.log(myComp);
+	});*/
+
+	/*Do something on Edge Animation sometime later...*/
+	/*setTimeout(function() {
+		var myComp =  AdobeEdge.getComposition('EDGE-175576662');
+		myComp.getStage().play();
+	}, 3000);*/
+});
+</script>
+
+<!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="animation_edgePreload.js"></script>
+    <style>
+        .edgeLoad-edgeAnimation1 { visibility:hidden; }
+    </style>
+<!--Adobe Edge Runtime End-->
+
+<!--Adobe Edge Runtime-->
+    <script type="text/javascript" charset="utf-8" src="animation2_edgePreload.js"></script>
+    <style>
+        .edgeLoad-edgeAnimation2 { visibility:hidden; }
+    </style>
+<!--Adobe Edge Runtime End-->
+
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1>Page title</h1>
+	</div>
+	<div class="content">
+		<!-- max height = 650px - header 70px - bottom padding 20px - padding top 20px = 540px -->
+		<span>Content here.</span>
+		<div id="Stage" class="edgeAnimation1">
+		</div>
+		<br/><br/>
+		<div id="Stage2" class="edgeAnimation2">
+		</div>
+	</div>
+</div>
+</body>
+</html>

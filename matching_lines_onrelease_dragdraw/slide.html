@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">
+
+<title>Drag to Connect Lines onRelease Validate with Multiline</title>
+
+<script charset="utf-8" src="../global_assets/lib/matchinglines/onreleasevalidate-dragdraw.js"></script>
+<link href="../global_assets/lib/matchinglines/matchinglines.css" rel="stylesheet" type="text/css">
+
+<style type="text/css">
+body {background: none}
+html, body {
+	border: 0px none;
+	padding:0;
+	margin: 0;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 600px;
+	border: 0px solid red;
+	position: relative;
+	padding: 20px;
+}
+.group2 {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.group1 .connector {
+	right: -15px;
+}
+.group2 .connector {
+	left: -15px;
+}
+#drawlinewrapper1, #drawlinewrapper2 {
+	position: relative;
+}
+#drawlinewrapper2 { margin-top: 30px; }
+.feedback {
+	height:30px;
+}
+</style>
+
+<script type="text/javascript">
+if (!window.console) console = ﻿{log: function() {}};
+
+function updateScreen (id) {
+	//var name = id.attr("id");
+	var total = getTotal(id);
+	var corrects = getCorrects(id);
+	var tries = getTries(id);
+	var ml = getMultiline(id);
+	$(id + " .stats").html(name + " <br/>" + "Total: " + total + " <br/>Corrects: " + corrects + " <br/>Tries: " + tries + " <br/>Multiline: " + ml);
+}
+
+function lineCorrect (id) {
+	feedback(id, "Correct!", 2000);
+}
+
+function lineIncorrect (id) {
+	console.log("incorrect: " + id);
+	feedback(id, "Incorrect!", 2000);
+}
+
+var completedQuiz = 0;
+
+function allComplete (id) {
+	feedback(id, "Quiz " + id + " completed!");
+	completedQuiz++;
+
+	//if all done
+	if (completedQuiz >= 2) {
+		try {
+			enableScroll();	
+		} catch (err) {
+			console.log(err.message);
+		}
+	}
+}
+
+var myInterval;
+
+function feedback (id, s, d) {
+	$(id + " .feedback").html(s);
+	clearInterval(myInterval);
+	if (typeof d !== "undefined") {
+		myInterval = setInterval(function () {
+			$(id + " .feedback").html("");
+		}, d);
+	}
+}
+
+$(document).ready (function () {
+	
+	//connect($("#sel1").get(0), $("#selc").get(0), "#0F0", 1);
+	//connect($("#sel2").get(0), $("#sela").get(0), "#f00", 1);
+	//connect($("#sel3").get(0), $("#selb").get(0), "blue", 1);
+	//connect($("#sel2").get(0), $("#selb").get(0), "yellow", 1);
+	//$("#sel1").data("ans", ["abc", "efg"]);
+	//console.log($("#sel1").data("ans")[1]);
+
+	//console.log($("#drawlinewrapper1").data("multiLine"));
+
+	$("#drawlinewrapper1 .resetbtn").click(function(){
+		resetLines("#drawlinewrapper1");
+	});
+
+	$("#drawlinewrapper1 .toggleMlbtn").click(function(){
+		if (getMultiline("#drawlinewrapper1")) {
+			setMultiline("#drawlinewrapper1", false);
+		} else {
+			setMultiline("#drawlinewrapper1", true);
+		}
+		resetLines("#drawlinewrapper1");
+	});
+
+	$("#drawlinewrapper2 .resetbtn").click(function(){
+		resetLines("#drawlinewrapper2");
+	});
+
+	$("#drawlinewrapper2 .toggleMlbtn").click(function(){
+		if (getMultiline("#drawlinewrapper2")) {
+			setMultiline("#drawlinewrapper2", false);
+		} else {
+			setMultiline("#drawlinewrapper2", true);
+		}
+		resetLines("#drawlinewrapper2");
+	});
+});
+
+$(window).load(function() {
+	//enableDebug();
+	disableScroll();
+	initLines("#drawlinewrapper1", {lineColor:"#0F0", lineThickness:1, multiLine:true});
+	initLines("#drawlinewrapper2", {lineColor:"#0FF", lineThickness:1, multiLine:false});
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div id="drawlinewrapper1">
+		<div class="group1">
+			<div class="connectorContainer">
+				Selb
+				<div id="sel1" class="connector" data-ans='["selb"]'></div>
+			</div>
+			<div class="connectorContainer">
+				Sela
+				<div id="sel2" class="connector" data-ans='["sela"]'></div>
+			</div>
+			<div class="connectorContainer">
+				Sela<br/>Selc
+				<div id="sel3" class="connector" data-ans='["sela","selc"]'></div>
+			</div>
+		</div>
+
+		<div class="group2">
+			<div class="connectorContainer">
+				Sel2<br/>Sel3
+				<div id="sela" class="connector"></div>
+			</div>
+			<div class="connectorContainer">
+				Sel1
+				<div id="selb" class="connector"></div>
+			</div>
+			<div class="connectorContainer">
+				Sel3
+				<div id="selc" class="connector"></div>
+			</div>
+		</div>
+		<div class="feedback"></div>
+		<div class="stats"></div>
+		<div><a class="resetbtn" href="javascript:void(0);">RESET</a> <a class="toggleMlbtn" href="javascript:void(0);">TOGGLE MULTILINE</a><br/>* Note: For boxes with more than 1 answer, Multiline true = both answers, false = either answer</div>
+	</div>
+
+	<div id="drawlinewrapper2">
+		<div class="group1">
+			<div class="connectorContainer">
+				Selb
+				<div id="2sel1" class="connector" data-ans='["2selb"]'></div>
+			</div>
+			<div class="connectorContainer">
+				Sela
+				<div id="2sel2" class="connector" data-ans='["2sela"]'></div>
+			</div>
+			<div class="connectorContainer">
+				Sela<br/>Selc
+				<div id="2sel3" class="connector" data-ans='["2sela","2selc"]'></div>
+			</div>
+		</div>
+
+		<div class="group2">
+			<div class="connectorContainer">
+				Sel2<br/>Sel3
+				<div id="2sela" class="connector"></div>
+			</div>
+			<div class="connectorContainer">
+				Sel1
+				<div id="2selb" class="connector"></div>
+			</div>
+			<div class="connectorContainer">
+				Sel3
+				<div id="2selc" class="connector"></div>
+			</div>
+		</div>
+		<div class="feedback"></div>
+		<div class="stats"></div>
+		<div><a class="resetbtn" href="javascript:void(0);">RESET</a> <a class="toggleMlbtn" href="javascript:void(0);">TOGGLE MULTILINE</a><br/>* Note: For boxes with more than 1 answer, Multiline true = both answers, false = either answer</div>
+	</div>
+	<div style="height:500px; background:grey; color:white; padding:10px; margin-top:30px;"><br><br>Take up some space below...</div>
+</div>
+</body>
+</html>

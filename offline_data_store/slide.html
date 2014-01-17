@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+<script charset="utf-8" src="../global_assets/lib/jquery.easing.js"></script>
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<script charset="utf-8" src="../global_assets/lib/storage.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">
+
+<title>Storing Offline Data</title>
+
+<style type="text/css">
+/*style*/
+#form1 input[type="text"] {
+	padding:0 3px;
+}
+#form1 {
+	font-size: 14px;
+}
+#form1 label {
+	font-weight: bold;
+}
+#status { color:#ff0000; }
+</style>
+
+<script type="text/javascript">
+var defaultName = "Your name here";
+
+function validateForm () {
+	debugMsg('Validating form...');
+	
+	var uName = $('#form1 input:text[name="name"]').val();
+	var uGender = $('#form1 input:radio[name="gender"]:checked').val();
+	var favcar = $('#form1 option:selected').text();
+	var myself = '';
+	var hobby = '';
+
+	if (uName == defaultName) {
+		uName = '';
+	}
+
+	if (typeof uGender === 'undefined') {
+		uGender = '';
+	}
+
+	$('#form1 input:checkbox[name="myself"]:checked').each(function() {
+		if (myself != '') myself += ', ';
+		myself += $(this).val();
+	});
+
+	$('#form1 input:checkbox[name="hobby"]:checked').each(function() {
+		if (hobby != '') hobby += ', ';
+		hobby += $(this).val();
+	});
+
+	storage_setValue('myname', uName);
+	storage_setValue('gender', uGender);
+	storage_setValue('favcar', favcar);
+	storage_setValue('myself', myself);
+	storage_setValue('hobby', hobby);
+
+	debugMsg(uName +  " " + uGender + " " + favcar + " " + myself + " " + hobby);
+
+	$('#status').html('Saved!');
+	
+	setTimeout (function () {
+		$('#status').html('');
+	}, 2000);
+}
+$(document).ready (function () {
+	//dom ready	
+	$('#form1 input:text[name="name"]').focus(function() {
+		if ($(this).val() == defaultName) {
+			$(this).val('');
+			$(this).css('color', '#000');
+		}
+	}).blur(function () {
+		if ($(this).val() == '') {
+			$(this).val(defaultName);
+			$(this).css('color', '#ccc');
+		}
+	});
+	$('#form1 input:text[name="name"]').trigger('blur');
+});
+$(window).load(function() {
+	//everything loaded including images
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1>Storing Offline Data</h1>
+	</div>
+	<div class="content">
+		<form id='form1' name='form1' onSubmit='javascript:validateForm(); return false;'>
+			<table>
+				<tr>
+					<td width='220px'><label for="name">Name:</label></td>
+					<td>
+						<input name='name' type='text'>
+					</td>
+				</tr>
+				<tr>
+					<td width='220px'><label for="gender">Gender:</label></td>
+					<td>
+						<input type='radio' name='gender' id='male' value='male'>Male
+						<input type="radio" name='gender' id='female' value='Female'>Female
+					</td>
+				</tr>
+				<tr>
+					<td width='220px'>
+						<label for="favcar">Favourite Car Manufacturer:</label>
+					</td>
+					<td>
+						<select name="favcar">
+						<option value="none" selected>None</option>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="fiat">Fiat</option>
+						<option value="audi">Audi</option>
+						<option value="lamborghini">Lamborghini</option>
+						<option value="ferrari">Ferrari</option>
+						<option value="porsche">Porsche</option>
+						<option value="bmw">BMW</option>
+						<option value="mercedes">Mercedes</option>
+						<option value="buggati">Buggati</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width='220px'><label for="myself">About myself:</label></td>
+					<td>
+						<input type="checkbox" name="myself" value="hot">I am hot!<br>
+						<input type="checkbox" name="myself" value="handsome">I am handsome!<br>
+						<input type="checkbox" name="myself" value="smart">I am so smart!
+					</td>
+				</tr>
+				<tr>
+					<td width='220px'><label for="hobby">My hobby:</label></td>
+					<td>
+						<input type="checkbox" name="hobby" value="eat">Eat<br>
+						<input type="checkbox" name="hobby" value="sleep">Sleep<br>
+						<input type="checkbox" name="hobby" value="play">Play
+					</td>
+				</tr>
+				<tr>
+					<td><input type='submit' value='Submit'></td>
+					<td><div id='status'></div></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="uid" prefix="rendition: http://www.idpf.org/vocab/rendition/# cc: http://creativecommons.org/ns#">
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+		<dc:title id="title">test2</dc:title>
+		<dc:creator>ST eServ</dc:creator>
+		<dc:identifier id="uid">stee.stengg.eserv.test2</dc:identifier>
+		<dc:language>en-US</dc:language>
+		<meta property="dcterms:modified">2013-11-11T16:25:30Z</meta>
+		<dc:publisher>ST eServ</dc:publisher>
+		<dc:description>This is a Sample</dc:description>
+	</metadata>
+
+	<manifest>
+		<item href="Add_edge_animation_to_template/animation.an" id="Add_edge_animation_to_templateanimationan" media-type="adobe/animate" />
+		<item href="Add_edge_animation_to_template/animation.html" id="Add_edge_animation_to_templateanimationhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="Add_edge_animation_to_template/animation2.an" id="Add_edge_animation_to_templateanimation2an" media-type="adobe/animate" />
+		<item href="Add_edge_animation_to_template/animation2.html" id="Add_edge_animation_to_templateanimation2html" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="Add_edge_animation_to_template/animation2_edge.js" id="Add_edge_animation_to_templateanimation2_edgejs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/animation2_edgeActions.js" id="Add_edge_animation_to_templateanimation2_edgeActionsjs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/animation2_edgePreload.js" id="Add_edge_animation_to_templateanimation2_edgePreloadjs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/animation_edge.js" id="Add_edge_animation_to_templateanimation_edgejs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/animation_edgeActions.js" id="Add_edge_animation_to_templateanimation_edgeActionsjs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/animation_edgePreload.js" id="Add_edge_animation_to_templateanimation_edgePreloadjs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/slide.html" id="Add_edge_animation_to_templateslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="Add_edge_animation_to_template/edge_includes/edge.1.5.0.min.js" id="Add_edge_animation_to_templateedge_includesedge150minjs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/edge_includes/edge.2.0.0.min.js" id="Add_edge_animation_to_templateedge_includesedge200minjs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/edge_includes/jquery-1.7.1.min.js" id="Add_edge_animation_to_templateedge_includesjquery171minjs" media-type="text/javascript" />
+		<item href="blink/index.html" id="blinkindexhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="drag_and_drop/slide.html" id="drag_and_dropslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="drag_and_drop/images/bgactivity1.jpg" id="drag_and_dropimagesbgactivity1jpg" media-type="image/jpeg" />
+		<item href="global_assets/css/default.bak.css" id="global_assetscssdefaultbakcss" media-type="text/css" />
+		<item href="global_assets/css/default.bak2.css" id="global_assetscssdefaultbak2css" media-type="text/css" />
+		<item href="global_assets/css/default.css" id="global_assetscssdefaultcss" media-type="text/css" />
+		<item href="global_assets/images/closebtn.png" id="global_assetsimagesclosebtnpng" media-type="image/png" />
+		<item href="global_assets/images/mainBG.jpg" id="global_assetsimagesmainBGjpg" media-type="image/jpeg" />
+		<item href="global_assets/jscrollpane/jquery.jscrollpane.css" id="global_assetsjscrollpanejqueryjscrollpanecss" media-type="text/css" />
+		<item href="global_assets/jscrollpane/jquery.jscrollpane.js" id="global_assetsjscrollpanejqueryjscrollpanejs" media-type="text/javascript" />
+		<item href="global_assets/jscrollpane/jquery.jscrollpane.min.js" id="global_assetsjscrollpanejqueryjscrollpaneminjs" media-type="text/javascript" />
+		<item href="global_assets/jscrollpane/jquery.mousewheel.js" id="global_assetsjscrollpanejquerymousewheeljs" media-type="text/javascript" />
+		<item href="global_assets/jscrollpane/jscrollpane.config.js" id="global_assetsjscrollpanejscrollpaneconfigjs" media-type="text/javascript" />
+		<item href="global_assets/jscrollpane/mwheelIntent.js" id="global_assetsjscrollpanemwheelIntentjs" media-type="text/javascript" />
+		<item href="global_assets/jscrollpane/images/ui-icons_222222_256x240.png" id="global_assetsjscrollpaneimagesuiicons_222222_256x240png" media-type="image/png" />
+		<item href="global_assets/lib/blink.js" id="global_assetslibblinkjs" media-type="text/javascript" />
+		<item href="global_assets/lib/container.js" id="global_assetslibcontainerjs" media-type="text/javascript" />
+		<item href="global_assets/lib/jquery.easing.js" id="global_assetslibjqueryeasingjs" media-type="text/javascript" />
+		<item href="global_assets/lib/jquery.min.js" id="global_assetslibjqueryminjs" media-type="text/javascript" />
+		<item href="global_assets/lib/jquery.mobile.min.css" id="global_assetslibjquerymobilemincss" media-type="text/css" />
+		<item href="global_assets/lib/jquery.mobile.min.js" id="global_assetslibjquerymobileminjs" media-type="text/javascript" />
+		<item href="global_assets/lib/lib.js" id="global_assetsliblibjs" media-type="text/javascript" />
+		<item href="global_assets/lib/mcms.js" id="global_assetslibmcmsjs" media-type="text/javascript" />
+		<item href="global_assets/lib/shared.js" id="global_assetslibsharedjs" media-type="text/javascript" />
+		<item href="global_assets/lib/storage.js" id="global_assetslibstoragejs" media-type="text/javascript" />
+		<item href="global_assets/lib/draganddrop/draganddrop - Copy (2).js" id="global_assetslibdraganddropdraganddropCopy2js" media-type="text/javascript" />
+		<item href="global_assets/lib/draganddrop/draganddrop - Copy.js" id="global_assetslibdraganddropdraganddropCopyjs" media-type="text/javascript" />
+		<item href="global_assets/lib/draganddrop/draganddrop.css" id="global_assetslibdraganddropdraganddropcss" media-type="text/css" />
+		<item href="global_assets/lib/draganddrop/draganddrop.js" id="global_assetslibdraganddropdraganddropjs" media-type="text/javascript" />
+		<item href="global_assets/lib/matchinglines/matchinglines.css" id="global_assetslibmatchinglinesmatchinglinescss" media-type="text/css" />
+		<item href="global_assets/lib/matchinglines/onreleasevalidate-dragdraw.js" id="global_assetslibmatchinglinesonreleasevalidatedragdrawjs" media-type="text/javascript" />
+		<item href="global_assets/lib/matchinglines/onreleasevalidate.btnhl.js" id="global_assetslibmatchinglinesonreleasevalidatebtnhljs" media-type="text/javascript" />
+		<item href="global_assets/lib/matchinglines/onreleasevalidate.js" id="global_assetslibmatchinglinesonreleasevalidatejs" media-type="text/javascript" />
+		<item href="global_assets/lib/matchinglines/submittovalidate.js" id="global_assetslibmatchinglinessubmittovalidatejs" media-type="text/javascript" />
+		<item href="global_assets/popup/popup.css" id="global_assetspopuppopupcss" media-type="text/css" />
+		<item href="global_assets/popup/popup.js" id="global_assetspopuppopupjs" media-type="text/javascript" />
+		<item href="global_assets/popup/popup.png" id="global_assetspopuppopuppng" media-type="image/png" />
+		<item href="global_assets/popup/popup_rotate.png" id="global_assetspopuppopup_rotatepng" media-type="image/png" />
+		<item href="global_assets/popup/popup_static.png" id="global_assetspopuppopup_staticpng" media-type="image/png" />
+		<item href="global_assets/popup/popup_static_info.png" id="global_assetspopuppopup_static_infopng" media-type="image/png" />
+		<item href="global_assets/popup2/popup.css" id="global_assetspopup2popupcss" media-type="text/css" />
+		<item href="global_assets/popup2/popup.js" id="global_assetspopup2popupjs" media-type="text/javascript" />
+		<item href="HPEdu_MCMSTemplate/slide.html" id="HPEdu_MCMSTemplateslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="matching_lines_onrelease/slide.html" id="matching_lines_onreleaseslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="matching_lines_onrelease_dragdraw/slide.html" id="matching_lines_onrelease_dragdrawslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="matching_lines_onsubmit/slide.html" id="matching_lines_onsubmitslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="offline_data_store/slide.html" id="offline_data_storeslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="offline_data_zretrieve/slide.html" id="offline_data_zretrieveslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_sample_from_eServ/slide.an" id="popup_sample_from_eServslidean" media-type="adobe/animate" />
+		<item href="popup_sample_from_eServ/slide.html" id="popup_sample_from_eServslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_sample_from_eServ/slide_edge.js" id="popup_sample_from_eServslide_edgejs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/slide_edgeActions.js" id="popup_sample_from_eServslide_edgeActionsjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/slide_edgePreload.js" id="popup_sample_from_eServslide_edgePreloadjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/audio/Stream.mp3" id="popup_sample_from_eServaudioStreammp3" media-type="audio/mpeg" />
+		<item href="popup_sample_from_eServ/edge_includes/edge.1.0.0.min.js" id="popup_sample_from_eServedge_includesedge100minjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/edge_includes/jquery-1.7.1.min.js" id="popup_sample_from_eServedge_includesjquery171minjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/edge_includes/jquery.easing.1.3.js" id="popup_sample_from_eServedge_includesjqueryeasing13js" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/edge_includes/json2_min.js" id="popup_sample_from_eServedge_includesjson2_minjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/images/background.jpg" id="popup_sample_from_eServimagesbackgroundjpg" media-type="image/jpeg" />
+		<item href="popup_sample_from_eServ/images/btn_next0001.png" id="popup_sample_from_eServimagesbtn_next0001png" media-type="image/png" />
+		<item href="popup_sample_from_eServ/images/button.png" id="popup_sample_from_eServimagesbuttonpng" media-type="image/png" />
+		<item href="popup_sample_from_eServ/images/footer.png" id="popup_sample_from_eServimagesfooterpng" media-type="image/png" />
+		<item href="popup_sample_from_eServ/images/image.png" id="popup_sample_from_eServimagesimagepng" media-type="image/png" />
+		<item href="popup_sample_from_eServ/images/title.png" id="popup_sample_from_eServimagestitlepng" media-type="image/png" />
+		<item href="popup_sample_from_eServ/toc/toc.css" id="popup_sample_from_eServtoctoccss" media-type="text/css" />
+		<item href="popup_sample_from_eServ/toc/toc.js" id="popup_sample_from_eServtoctocjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/toc/toc.png" id="popup_sample_from_eServtoctocpng" media-type="image/png" />
+		<item href="popup_sample_from_eServ/toc/toc_modified.js" id="popup_sample_from_eServtoctoc_modifiedjs" media-type="text/javascript" />
+		<item href="popup_with_jquery_mobile/slide.html" id="popup_with_jquery_mobileslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_with_jquery_mobile/images/www.jpg" id="popup_with_jquery_mobileimageswwwjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll/slide.html" id="popup_with_scrollslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_with_scroll/images/1.jpg" id="popup_with_scrollimages1jpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/18XM203-rounds-in-bandoleer.JPG" id="popup_with_scrollimages18XM203roundsinbandoleerJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/76mm-Smoke-Grenades.jpg" id="popup_with_scrollimages76mmSmokeGrenadesjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/ammo.JPG" id="popup_with_scrollimagesammoJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/driver.png" id="popup_with_scrollimagesdriverpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/GL.png" id="popup_with_scrollimagesGLpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/GPMG-and-spare-barrel.JPG" id="popup_with_scrollimagesGPMGandsparebarrelJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/LAW.png" id="popup_with_scrollimagesLAWpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/matador.JPG" id="popup_with_scrollimagesmatadorJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/medic.png" id="popup_with_scrollimagesmedicpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/Night-vision-monocular.JPG" id="popup_with_scrollimagesNightvisionmonocularJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/Periscope.jpg" id="popup_with_scrollimagesPeriscopejpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/PRC-940-manpack-set.png" id="popup_with_scrollimagesPRC940manpacksetpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/SAW.png" id="popup_with_scrollimagesSAWpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/sectCommd.png" id="popup_with_scrollimagessectCommdpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/signaller.png" id="popup_with_scrollimagessignallerpng" media-type="image/png" />
+		<item href="popup_with_scroll/images/temp.jpg" id="popup_with_scrollimagestempjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/VRC-946-radio-set.png" id="popup_with_scrollimagesVRC946radiosetpng" media-type="image/png" />
+		<item href="scrollbar/slide.html" id="scrollbarslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="videotest/slide.html" id="videotestslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="videotest/videos/FlyThrough.jpg" id="videotestvideosFlyThroughjpg" media-type="image/jpeg" />
+		<item href="videotest/videos/FlyThrough.mp4" id="videotestvideosFlyThroughmp4" media-type="video/mp4" />
+		<item href="video_seeking/slide.html" id="video_seekingslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="video_seeking/videos/FlyThrough.jpg" id="video_seekingvideosFlyThroughjpg" media-type="image/jpeg" />
+		<item href="video_seeking/videos/FlyThrough.mp4" id="video_seekingvideosFlyThroughmp4" media-type="video/mp4" />
+		<item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+	</manifest>
+
+	<spine>
+		<itemref idref="Add_edge_animation_to_templateanimationhtml"/>
+		<itemref idref="Add_edge_animation_to_templateanimation2html"/>
+		<itemref idref="Add_edge_animation_to_templateslidehtml"/>
+		<itemref idref="blinkindexhtml"/>
+		<itemref idref="drag_and_dropslidehtml"/>
+		<itemref idref="HPEdu_MCMSTemplateslidehtml"/>
+		<itemref idref="matching_lines_onreleaseslidehtml"/>
+		<itemref idref="matching_lines_onrelease_dragdrawslidehtml"/>
+		<itemref idref="matching_lines_onsubmitslidehtml"/>
+		<itemref idref="offline_data_storeslidehtml"/>
+		<itemref idref="offline_data_zretrieveslidehtml"/>
+		<itemref idref="popup_sample_from_eServslidehtml"/>
+		<itemref idref="popup_with_jquery_mobileslidehtml"/>
+		<itemref idref="popup_with_scrollslidehtml"/>
+		<itemref idref="scrollbarslidehtml"/>
+		<itemref idref="videotestslidehtml"/>
+		<itemref idref="video_seekingslidehtml"/>
+	</spine>
+
+</package>

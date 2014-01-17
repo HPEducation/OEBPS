@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css"/>
+
+<title>Video on MCMS Demo</title>
+
+<style type="text/css">
+/*style*/
+</style>
+
+<script type="text/javascript">
+$(document).ready (function () {
+	//dom ready
+	enableDebug();
+});
+$(window).load(function() {
+	//everything loaded including images
+
+	//seek to time on start of video
+	lib.videoInit = function () {
+		debugMsg("metadata loaded");
+		$('#seekers').show();
+	}
+	lib.videoEnded = function () {
+		debugMsg("video ended");
+	}
+	lib.videoPaused = function () {
+		debugMsg("video paused");
+	}
+	lib.videoPlayed = function () {
+		debugMsg("video played");
+	}
+	lib.videoStopped = function () {
+		debugMsg("video stopped");
+		$('#seekers').hide();
+	}
+
+	$('#seekers').hide();
+
+	//$('#videoContainer').get(0) = document.getElementById('videoContainer')
+	/*playVideo(
+		path,
+		{
+			container:continerElement, //$('#videoContainer').get(0) = document.getElementById('videoContainer')
+			//if container is specified, the x, y, width and height set below will be ignored and set according to container's properties, if container is not specified, and below values are not set, default values will be used, hence this whole object is optional.
+			x:20, //optional, default is 0
+			y,50, //optional, default is 0
+			width:500, //optional, default is original video width
+			height:400,  //optional, default is original video height
+			startTime:25, //optional, in secs
+			loop:true //optional, default is false
+		}
+	);*/
+	//Examples:
+	//playVideo('videos/FlyThrough.mp4', {container:document.getElementById('videoContainer'), startTime:25});
+	//playVideo('videos/FlyThrough.mp4', {x:200, y:100, width:640, height:480, startTime:25, loop:true});
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1>Video on MCMS Demo</h1>
+	</div>
+	<div class="content">
+		This is a video demo.
+		<div id="videoContainer" style="border: 2px solid red; width:500px; height:400px; background:black; padding:10px;"></div>
+		<a href="javascript:playVideoOnce('videos/FlyThrough.mp4', 350, 50, 500, 400);">Load and play from 25th secs</a>&nbsp;
+		<a href="javascript:pauseVideo();">Pause</a>&nbsp;
+		<a href="javascript:stopVideo2();">Stop</a>&nbsp;
+		<a href="javascript:resumeVideo();">Resume</a>
+		<br/>
+		<div id="seekers">
+			<a href="javascript:videoSeekToTime(10);">10 secs</a>&nbsp;
+			<a href="javascript:videoSeekToTime(20);">20 secs</a>&nbsp;
+			<a href="javascript:videoSeekToTime(30);">30 secs</a>&nbsp;
+			<a href="javascript:videoSeekToTime(40);">40 secs</a>&nbsp;
+			<a href="javascript:videoSeekToTime(document.getElementById('mcms_video').duration - 3);">last 3 secs</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

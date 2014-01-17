@@ -1,0 +1,77 @@
+/* slide up animation */
+@keyframes toc_show_animation {
+	0%   { top: 1000px; }
+	100% { top: 5px; }
+}
+@-webkit-keyframes toc_show_animation {
+	0%   { top: 1000px; }
+	100% { top: 5px; }
+}
+@-moz-keyframes toc_show_animation {
+	0%   { top: 1000px; }
+	100% { top: 5px; }
+}
+@-o-keyframes toc_show_animation {
+	0%   { top: 1000px; }
+	100% { top: 5px; }
+}
+
+/* slide down animation */
+@keyframes toc_hide_animation {
+	0%   { top: 5px; }
+	100% { top: 1000px; }
+}
+@-webkit-keyframes toc_hide_animation {
+	0%   { top: 5px; }
+	100% { top: 1000px; }
+}
+@-moz-keyframes toc_hide_animation {
+	0%   { top: 5px; }
+	100% { top: 1000px; }
+}
+@-o-keyframes toc_hide_animation {
+	0%   { top: 5px; }
+	100% { top: 1000px; }
+}
+
+img.toc_show {
+	animation-name: toc_show_animation;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	-webkit-animation-name: toc_show_animation;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: toc_show_animation;
+	-moz-animation-duration: 0.5s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	-o-animation-name: toc_show_animation;
+	-o-animation-duration: 0.5s;
+	-o-animation-iteration-count: 1;
+	-o-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+img.toc_hide {
+	animation-name: toc_hide_animation;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	-webkit-animation-name: toc_hide_animation;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: toc_hide_animation;
+	-moz-animation-duration: 0.5s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	-o-animation-name: toc_hide_animation;
+	-o-animation-duration: 0.5s;
+	-o-animation-iteration-count: 1;
+	-o-animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}

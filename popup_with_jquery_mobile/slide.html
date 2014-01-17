@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+<script charset="utf-8" src="../global_assets/lib/jquery.easing.js"></script>
+<script src="../global_assets/lib/jquery.mobile.min.js"></script> 
+<link rel="stylesheet" href="../global_assets/lib/jquery.mobile.min.css" /> 
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<!--<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">-->
+
+<title>Popup with jQuery</title>
+
+<style type="text/css">
+/*style*/
+</style>
+
+<script type="text/javascript">
+$(document).ready (function () {
+	//dom ready
+});
+$(window).load(function() {
+	//everything loaded including images
+});
+</script>
+
+</head> 
+
+<body> 
+
+	<div data-role="page" id="popup-hours"> 
+		<div data-role="content"> 
+			<div data-role="controlgroup" data-type="horizontal"> 
+				<a href="#popup-hours" data-transition="pop" data-overlay-theme="a" data-role="button" data-rel="popup" ><img src="images/www.jpg" width="35" height="30" alt="Hours"><br> Hours</a>
+
+				<div data-role="popup" id="popup-hours"> 
+					<strong><u>Lunch Hours:</u></strong><br> 
+					<strong>Monday thru Friday</strong><br> 
+					11:00am to 2:30pm <br><br> 
+					<strong><u>Dinner Hours:</u></strong><br> 
+					<strong>Monday thru Thursday</strong><br> 
+					4:30pm to 9:00pm 
+					<br> 
+					<strong>Friday</strong> - 4:30pm to 10:00pm <br> 
+					<strong>Saturday</strong> - 4:00pm to 10:00pm <br> 
+					<strong>Sunday</strong> - 4:00pm to 9:00pm 
+				</div>
+			</div> 
+		</div> 
+	</div> 
+
+</body> 
+</html>

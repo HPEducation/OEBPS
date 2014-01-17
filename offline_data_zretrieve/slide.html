@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+<script charset="utf-8" src="../global_assets/lib/jquery.easing.js"></script>
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<script charset="utf-8" src="../global_assets/lib/storage.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">
+
+<title>Retrieving Offline Data</title>
+
+<style type="text/css">
+/*style*/
+</style>
+
+<script type="text/javascript">
+	var name = storage_getValue('myname');
+	var gender = storage_getValue('gender');
+	var favcar = storage_getValue('favcar');
+	var myself = storage_getValue('myself');
+	var hobby = storage_getValue('hobby');
+
+	debugMsg(name +  " " + gender + " " + favcar + " " + myself + " " + hobby);	
+
+$(document).ready (function () {
+	//dom ready	
+	$('.content').html('Data saved: <br/>Name: ' + name + '<br/>Gender: ' + gender + '<br/>Favourite Car Manufacturer: ' + favcar + '<br/>About myself: I am ' + myself + '<br/>My hobby: ' + hobby);
+});
+$(window).load(function() {
+	//everything loaded including images
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1>Retrieving Offline Data</h1>
+	</div>
+	<div class="content">
+	</div>
+</div>
+</body>
+</html>

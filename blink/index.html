@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Blink</title>
+<script type="text/javascript" src="../global_assets/lib/jquery.min.js"></script>
+<script type="text/javascript" src="../global_assets/lib/blink.js"></script>
+
+<script>
+$(document).ready (function () {
+	//dom ready
+	//blink usage:
+	//$(obj).blink({delay: interval between blinks (optional), times: how many times to blink before auto unblink (optional), visible: at the end of blink animation to show or hide (optional)});
+	$("#welcome").blink();
+	//you can also call unblink() for the any obj to stop blinking
+	//$("#welcome").unblink();
+	
+	//delay 1.5s before blinking
+	setTimeout( function () {
+		$("#to").blink({delay:200, times:4, visible:false})
+	}, 1500);
+	
+	//delay 1s before blinking
+	setTimeout( function () {
+		$("#hp").blink({delay:1000, times:5, visible:true});
+	}, 1000);
+});
+</script>
+</head>
+
+<body>
+<div id="welcome">Welcome!</div>
+<div id="to">To</div>
+<div id="hp">HP Edu!</div>
+</body>
+</html>

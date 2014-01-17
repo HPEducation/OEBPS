@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+<!--<script charset="utf-8" src="../global_assets/lib/jquery.easing.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
+<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
+
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">
+
+<title>Visual Scrollbar</title>
+
+<style type="text/css">
+/*style*/
+#box1 {
+	height: 200px;
+	width:800px;
+	overflow: auto;
+}
+#box2 {
+	margin-top: 20px;
+	height: 200px;
+	width:500px;
+	overflow: auto;
+}
+#box2 p {
+	width: 800px;
+}
+.scroll-pane {
+	font-size: 14px;
+	padding: 10px;
+	border:1px solid black;
+	position: relative;
+}
+</style>
+
+<!-- style of scrollbar -->
+<link href="../global_assets/jscrollpane/jquery.jscrollpane.css" type="text/css" rel="stylesheet" />
+<script charset="utf-8" src="../global_assets/jscrollpane/jquery.jscrollpane.min.js"></script>
+<!-- configurations settings for scrollbar -->
+<script charset="utf-8" src="../global_assets/jscrollpane/jscrollpane.config.js"></script>
+<!-- below is not necessary for mobile development -->
+<script charset="utf-8" src="../global_assets/jscrollpane/jquery.mousewheel.js"></script>
+<script charset="utf-8" src="../global_assets/jscrollpane/mwheelIntent.js"></script>
+
+<script type="text/javascript">
+$(document).ready (function () {
+	//dom ready
+	//playAudio("audio/filename.mp3");
+});
+$(window).load(function() {
+	//everything loaded including images
+	var pane = $('.scroll-pane');
+	pane.jScrollPane(scrollPaneParams);
+});
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1>Visual Scrollbar</h1>
+	</div>
+	<div class="content">
+		<div id='box1' class='scroll-pane'>
+			<!-- 
+			/////////////////////***********************************//////////////////////////
+			/////////////////////***********************************//////////////////////////
+			/////////////////////***********************************//////////////////////////
+			all text inside the scrollbox must be inside an element p, div, article whatever
+			/////////////////////***********************************//////////////////////////
+			/////////////////////***********************************//////////////////////////
+			/////////////////////***********************************//////////////////////////
+			-->
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed sem ipsum. Ut id lobortis leo. Proin id dapibus ligula, at rutrum ligula. Donec scelerisque turpis vitae volutpat tempus. Phasellus lacus massa, cursus sit amet ullamcorper nec, facilisis id orci. Maecenas ut blandit nunc. Nunc aliquam dictum iaculis. Praesent facilisis venenatis nulla id tempor. Curabitur ultrices dapibus elit, eu egestas odio pellentesque et.</p>
+
+			<div>Suspendisse egestas diam erat. Praesent nec tortor nisl. Etiam at metus ante. Fusce rutrum posuere feugiat. Aliquam congue purus suscipit eleifend tincidunt. Aenean eu porttitor ligula, at rutrum mauris. In lacinia condimentum faucibus. In consequat, augue in placerat commodo, massa quam placerat arcu, semper tincidunt lacus magna eget felis. Morbi volutpat dignissim odio, sed feugiat nulla hendrerit sit amet. Proin gravida ornare ligula sit amet auctor. Donec justo nunc, feugiat vitae malesuada pellentesque, varius et lectus. Aliquam elit dui, aliquet sed enim venenatis, hendrerit luctus felis. Duis et quam risus. Sed commodo arcu pretium tellus sagittis, nec fermentum neque ullamcorper. Cras ullamcorper tortor a hendrerit dapibus.</div>
+
+			<article>Etiam varius aliquam leo vel aliquam. Donec mattis enim quis felis condimentum, auctor feugiat nisi adipiscing. Quisque nec neque ut ante accumsan lobortis. Donec rutrum eu metus in lacinia. Aenean et faucibus urna. Nam porttitor ultrices interdum. Morbi non felis adipiscing, varius justo at, vestibulum lorem. Fusce lorem enim, vehicula at tincidunt sed, commodo eget lacus. Proin euismod, nibh nec laoreet semper, urna ante pretium sem, sit amet mollis mauris turpis vel nunc. Mauris sed justo tincidunt neque feugiat consequat ut eget felis. Cras feugiat mauris feugiat pharetra sagittis. Integer eu luctus mauris. Duis a enim sed massa tristique suscipit ac non risus. Aenean leo ligula, tincidunt vitae tellus placerat, suscipit sagittis mauris. In sagittis feugiat molestie. Sed non convallis dui.</article>
+
+			<p>Maecenas eu quam est. Curabitur a dolor lacinia, eleifend dui ultrices, eleifend sem. Etiam iaculis lectus eget blandit tempus. Vivamus ultrices eget nulla sed sollicitudin. Nam tempor diam sed turpis pretium, sed fringilla nunc convallis. Proin eget augue ut neque aliquet accumsan ut suscipit est. Phasellus vitae est tortor. Duis eget consequat quam, in varius purus. Aliquam scelerisque tempor enim laoreet feugiat. Sed orci lorem, luctus eget elit eu, venenatis cursus risus. Proin ipsum lectus, posuere vitae velit at, pretium accumsan quam. Mauris lacinia libero pellentesque nunc elementum mattis. Maecenas at blandit velit. Sed convallis vitae diam vel condimentum.</p>
+
+			<p>Pellentesque lobortis ullamcorper purus eu pretium. Vestibulum id augue vestibulum, vestibulum felis non, vehicula est. Proin at tortor sem. Nam at scelerisque sem. In sollicitudin dui a nibh pharetra, sed bibendum erat tempus. Curabitur ac ipsum vitae enim vehicula accumsan vel eget risus. Vivamus nibh risus, tristique non ornare dignissim, hendrerit vel turpis. Mauris viverra posuere ornare. Etiam eget dapibus purus. Cras mauris ligula, faucibus at gravida eu, ullamcorper id quam.</p>
+
+			<p>Vestibulum adipiscing urna libero, fermentum faucibus elit fermentum vel. Integer ornare lorem vel convallis suscipit. Cras sed venenatis est. Vivamus at tortor auctor, gravida neque sit amet, convallis leo. Duis euismod consequat eros, sit amet tincidunt eros hendrerit nec. Vivamus ultrices justo aliquet, lobortis libero quis, tincidunt nisi. Mauris eu hendrerit erat. Nullam rhoncus ipsum sem. Vestibulum sed ante nulla. Suspendisse fermentum ullamcorper nisl, in imperdiet ante ullamcorper in. Phasellus ut tincidunt quam. Vivamus eget eleifend tortor. Donec magna massa, sollicitudin in rutrum sit amet, scelerisque a nisl.</p>
+
+			<p>Donec velit arcu, convallis sed lacinia placerat, dapibus et sem. Etiam vitae elit sed ligula scelerisque tempus. Etiam suscipit facilisis libero, vel sodales lorem pharetra quis. Nulla id sem orci. Praesent ut justo ut nibh blandit bibendum et vel purus. Suspendisse elementum lorem enim, et sollicitudin lectus tincidunt vel. Morbi dui orci, aliquet at turpis vel, congue iaculis orci. Quisque porta, odio faucibus varius imperdiet, lorem massa dictum risus, sit amet vulputate augue arcu id nulla. Pellentesque placerat accumsan arcu sed luctus. Nullam tempor quis tortor in viverra. Aenean venenatis turpis vitae lacus hendrerit fermentum. Curabitur vehicula libero magna, adipiscing aliquam elit luctus vel. Cras consequat dignissim malesuada. Nulla vehicula consectetur purus ut convallis. In ac orci et justo iaculis vulputate vitae ac urna.</p>
+
+			<p>Mauris et lectus tristique, fermentum arcu ac, luctus eros. Fusce lobortis laoreet leo in suscipit. Vivamus eleifend semper ante. Donec convallis sollicitudin facilisis. Vivamus ullamcorper magna at nulla molestie, feugiat accumsan quam sodales. Nunc sollicitudin tristique eros quis porta. Pellentesque hendrerit erat non vestibulum tincidunt. Curabitur feugiat vitae neque eu sagittis. Etiam tempor tortor a magna condimentum, non ultrices nisl sodales. Phasellus eleifend tristique mi porttitor elementum. Quisque ut egestas felis. Phasellus placerat neque eget diam facilisis, viverra vulputate ipsum tincidunt. Duis in erat consequat, lobortis lectus sed, blandit ipsum.</p>
+		</div>
+		<div id='box2' class='scroll-pane'>
+			<p>Vestibulum adipiscing urna libero, fermentum faucibus elit fermentum vel. Integer ornare lorem vel convallis suscipit. Cras sed venenatis est. Vivamus at tortor auctor, gravida neque sit amet, convallis leo. Duis euismod consequat eros, sit amet tincidunt eros hendrerit nec. Vivamus ultrices justo aliquet, lobortis libero quis, tincidunt nisi. Mauris eu hendrerit erat. Nullam rhoncus ipsum sem. Vestibulum sed ante nulla. Suspendisse fermentum ullamcorper nisl, in imperdiet ante ullamcorper in. Phasellus ut tincidunt quam. Vivamus eget eleifend tortor. Donec magna massa, sollicitudin in rutrum sit amet, scelerisque a nisl.</p>
+
+			<p>Donec velit arcu, convallis sed lacinia placerat, dapibus et sem. Etiam vitae elit sed ligula scelerisque tempus. Etiam suscipit facilisis libero, vel sodales lorem pharetra quis. Nulla id sem orci. Praesent ut justo ut nibh blandit bibendum et vel purus. Suspendisse elementum lorem enim, et sollicitudin lectus tincidunt vel. Morbi dui orci, aliquet at turpis vel, congue iaculis orci. Quisque porta, odio faucibus varius imperdiet, lorem massa dictum risus, sit amet vulputate augue arcu id nulla. Pellentesque placerat accumsan arcu sed luctus. Nullam tempor quis tortor in viverra. Aenean venenatis turpis vitae lacus hendrerit fermentum. Curabitur vehicula libero magna, adipiscing aliquam elit luctus vel. Cras consequat dignissim malesuada. Nulla vehicula consectetur purus ut convallis. In ac orci et justo iaculis vulputate vitae ac urna.</p>
+
+			<p>Mauris et lectus tristique, fermentum arcu ac, luctus eros. Fusce lobortis laoreet leo in suscipit. Vivamus eleifend semper ante. Donec convallis sollicitudin facilisis. Vivamus ullamcorper magna at nulla molestie, feugiat accumsan quam sodales. Nunc sollicitudin tristique eros quis porta. Pellentesque hendrerit erat non vestibulum tincidunt. Curabitur feugiat vitae neque eu sagittis. Etiam tempor tortor a magna condimentum, non ultrices nisl sodales. Phasellus eleifend tristique mi porttitor elementum. Quisque ut egestas felis. Phasellus placerat neque eget diam facilisis, viverra vulputate ipsum tincidunt. Duis in erat consequat, lobortis lectus sed, blandit ipsum.</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>
