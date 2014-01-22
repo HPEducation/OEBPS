@@ -1,4 +1,4 @@
-/* last edited by Jin on 2013.09.10 */
+/* last edited by Jin on 2014.01.22 */
 
 @charset "utf-8";
 
@@ -108,11 +108,14 @@ section, article, aside, footer, header, nav, hgroup {
 
 .restricted{
 	text-align:center;
-	vertical-align:top;
 	font: 18px Arial;
-	position:absolute;
-	top:5px;
-	left:549px;	
+	color: white;
+}
+
+.warfighting {
+	font: 18px Arial;
+	color:white;
+	display:inline-block;
 }
 
 .content {
@@ -120,10 +123,6 @@ section, article, aside, footer, header, nav, hgroup {
 	padding-top: 20px;
 	position:relative;
 	font-size: 2.4em;
-}
-
-.invisibleTxt{
-	display:none;	
 }
 
 .justify { 
@@ -198,7 +197,7 @@ h2:first-child { margin-top: 0; }
 section { margin-top: 40px; }
 section:first-child { margin-top: 0; }
 
-p { margin-top: 20px; }
+p { margin-top: 5px; }
 
 .closebtn {
 	background: url('../images/closebtn.png') left top no-repeat;
@@ -207,4 +206,91 @@ p { margin-top: 20px; }
 	right: -13px;
 	height: 29px;
 	width: 29px;
+}
+
+ul, ol {
+	margin-top: 0;
+}
+
+.customCheckbox input[type=checkbox], .customRadio input[type=radio] {
+	display: none;
+}
+
+.customCheckbox label {
+	display: inline-block;  
+	cursor: pointer;  
+	position: relative;  
+	padding-left: 25px;
+}
+.customCheckbox label:before {
+	content: "";  
+	display: inline-block;  
+  
+	width: 16px;  
+	height: 16px;  
+  
+	margin-right: 10px;  
+	position: absolute;  
+	left: 0;  
+	top: 5px;  
+	background-color: #aaa;  
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+
+	border-radius: 3px;  
+}
+.customCheckbox input[type=checkbox]:checked + label:before {  
+	content: "\2713";
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+	font-size: 15px;
+	color: #f3f3f3;
+	text-align: center;
+	line-height: 15px;
+}
+.customCheckbox input[type=checkbox].incorrect + label, .customCheckbox input[type=checkbox].incorrect + label:before {
+	content: "\2717";
+	color: red !important;
+}
+.customCheckbox input[type=checkbox].correct + label, .customCheckbox input[type=checkbox].correct + label:before {
+	color: green !important;
+}
+
+.customRadio label {
+	display: inline-block;  
+	cursor: pointer;  
+	position: relative;  
+	padding-left: 25px;
+}
+.customRadio label:before {
+	content: "";
+	display: inline-block;
+
+	width: 16px;
+	height: 16px;
+
+	margin-right: 10px;
+	position: absolute;
+	left: 0;
+	top: 5px;
+	background-color: #aaa;
+	box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+
+	border-radius: 8px;
+}
+.customRadio input[type=radio]:checked + label:before {
+	content: "\2022";
+	color: #f3f3f3;
+	font-size: 30px;
+	text-align: center;
+	line-height: 18px;
+}
+.customRadio input[type=radio].incorrect + label, .customRadio input[type=radio].incorrect + label:before {
+	content: "";
+	color: red !important;
+}
+.customRadio input[type=radio].correct + label, .customRadio input[type=radio].correct + label:before {
+	color: green !important;
+}
+
+.instructions {
+	font-style: italic;
 }
