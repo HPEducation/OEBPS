@@ -164,15 +164,15 @@ section, article, aside, footer, header, nav, hgroup {
 }
 
 .innershadow {
-	-moz-box-shadow:    inset 2px 2px 10px #333;
-	-webkit-box-shadow: inset 2px 2px 10px #333;
-	box-shadow:         inset 2px 2px 10px #333;
+	-moz-box-shadow:    inset 2px 2px 10px rgba(0, 0, 0, .7);
+	-webkit-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, .7);
+	box-shadow:         inset 2px 2px 10px rgba(0, 0, 0, .7);
 }
 
 .outershadow {
-	-moz-box-shadow:    3px 3px 7px 0 #333;
-	-webkit-box-shadow: 3px 3px 7px 0 #333;
-	box-shadow:         3px 3px 7px 0 #333;
+	-moz-box-shadow:    3px 3px 7px 0 rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, .7);
+	box-shadow:         3px 3px 7px 0 rgba(0, 0, 0, .7);
 }
 
 .roundedcorner {
