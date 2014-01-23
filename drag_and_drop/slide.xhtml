@@ -1,27 +1,22 @@
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-<meta charset="utf-8">
-<meta name="viewport" content="width=1168, height=626, user-scalable=no, target-densityDpi=device-dpi" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1168, height=650, user-scalable=no, target-densityDpi=device-dpi" />
 <meta name="mcms-code-version" content="1" />
-<!--<meta name="mcms-disable-feature" content="previous, next, pageswipe" />-->
 
 <script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
-
 <script charset="utf-8" src="../global_assets/lib/shared.js"></script>
 <script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
-<!--<link href="../global_assets/popup/popup.css" type="text/css" rel="stylesheet" />-->
-<!--<script type="text/javascript" charset="utf-8" src="../global_assets/popup/popup.js"></script>-->
-
 <script charset="utf-8" src="../global_assets/lib/lib.js"></script>
-<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css">
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css"/>
 
 <title>Drag and drop</title>
 
 <!-- FOR SOME UNKNOWN REASON THE SCROLL POSITION IS ALREADY OFFESET ON SCROLLED PAGES ON GALAXY TAB BUT NOT ON DESKTOP BROWSER -->
+<script charset="utf-8" src="../global_assets/app.js"></script>
 <script charset="utf-8" src="../global_assets/lib/draganddrop/draganddrop.js"></script>
-<link href="../global_assets/lib/draganddrop/draganddrop.css" rel="stylesheet" type="text/css">
+<link href="../global_assets/lib/draganddrop/draganddrop.css" rel="stylesheet" type="text/css"/>
 
 <style type="text/css">
 /*style*/
@@ -43,7 +38,7 @@ body {background: none;}
 }
 .tick.tRight {
 	position: absolute;
-	left: 85px;
+	right: -22px;
 	top: 5px;
 }
 .dragMe {
@@ -59,10 +54,12 @@ body {background: none;}
 function correct (id) {
 	$(id).find(".tick").show();
 	//play sfx
+	playAudio(sndCorrect);
 }
 function incorrect () {
 	//play sfx
-	console.log("wrong!")
+	console.log("wrong!");
+	playAudio(sndWrong);
 }
 function completed (obj) {
 	//obj.find(".completion").html("Completed!");
@@ -115,7 +112,7 @@ $(window).load(function() {
 				</div>
 			</div>
 			<div class="colRight">
-				<img src="images/bgactivity1.jpg">
+				<img src="images/bgactivity1.jpg"/>
 				<div style="position:absolute; top:0px; border:0px solid green; width:100%; height:100%;">
 					<div style="left:200px; top:165px;" class="dropHere innershadow roundedcorner" data-ans="1"><div class="tick tLeft"></div></div>
 					<div style="left:185px; top:225px;" class="dropHere innershadow roundedcorner" data-ans="*"><div class="tick tLeft"></div>*</div>
@@ -154,7 +151,7 @@ $(window).load(function() {
 	</div>
 </div>
 <!--<div id="dragdrop_debug" style="position:absolute; right:0px; top:0px; max-height:300px; width:300px; overflow:auto; background:#fff; border:1px solid black; padding:5px;"></div>-->
-<div style="height:500px; background:#ccc; color:white; padding:10px; margin-top:30px;"><br><br>Take up some space below...</div>
+<div style="height:500px; background:#ccc; color:white; padding:10px; margin-top:30px;"><br/><br/>Take up some space below...</div>
 </body>
 </html>
 	

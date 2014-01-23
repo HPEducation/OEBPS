@@ -150,7 +150,7 @@ section, article, aside, footer, header, nav, hgroup {
 	color:#f00;
 }
 
-.tick {
+.tick, .tickheavy {
 	color: green;
 	font-size: 24px;
 }
@@ -161,6 +161,19 @@ section, article, aside, footer, header, nav, hgroup {
 
 .tickheavy:after {
 	content: "\2714";
+}
+
+.cross, .crossheavy {
+	color: red;
+	font-size: 24px;
+}
+
+.cross:after {
+	content: "\2717";
+}
+
+.crossheavy:after {
+	content: "\2718";
 }
 
 .innershadow {
@@ -218,7 +231,7 @@ ul, ol {
 
 .customCheckbox label {
 	display: inline-block;  
-	cursor: pointer;  
+	cursor: pointer;
 	position: relative;  
 	padding-left: 25px;
 }
