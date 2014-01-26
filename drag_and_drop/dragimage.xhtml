@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=1168, height=650, user-scalable=no, target-densityDpi=device-dpi" />
+<meta name="mcms-code-version" content="1" />
+
+<script charset="utf-8" src="../global_assets/lib/jquery.min.js"></script>
+<script charset="utf-8" src="../global_assets/lib/shared.js"></script>
+<script charset="utf-8" src="../global_assets/lib/mcms.js"></script>
+<link href="../global_assets/css/default.css" rel="stylesheet" type="text/css" />
+<script charset="utf-8" src="../global_assets/lib/lib.js"></script>
+
+<title>Activity 4: Task 1</title>
+
+<script charset="utf-8" src="subnavi-local.js"></script>
+<link href="subnavi-local.css" type="text/css" rel="stylesheet" />
+<script charset="utf-8" src="../global_assets/subnavi/subnavi.js"></script>
+<link href="../global_assets/subnavi/subnavi.css" type="text/css" rel="stylesheet" />
+
+<script charset="utf-8" src="../global_assets/lib/draganddrop/draganddrop.js"></script>
+<link href="../global_assets/lib/draganddrop/draganddrop.css" rel="stylesheet" type="text/css"/>
+
+<script charset="utf-8" src="../global_assets/app.js"></script>
+
+<style type="text/css">
+.tick, .cross {
+	font-size: 30px;
+}
+.button {
+	background: #735299;
+	padding: 10px;
+	width: 180px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	border-radius: 7px; /* future proofing */
+	-khtml-border-radius: 7px; /* for old Konqueror browsers */
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	-moz-box-shadow:    0px 3px 5px 0 rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 0px 3px 5px 0 rgba(0, 0, 0, .7);
+	box-shadow:         0px 3px 5px 0 rgba(0, 0, 0, .7);
+}
+.tick.tRight {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	z-index: 30;
+}
+.dragMe {
+	float:left;
+	margin: 0 12px;
+	padding: 0;
+	border: 0;
+	width: 190px;
+	height: 140px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 190px 140px;
+}
+.dropHere {
+	/*position: absolute !important;*/
+	float: left;
+	margin: 0 10px;
+	background: url("images/droparea.png") 0 0 no-repeat;
+	width: 200px;
+	height: 150px;
+}
+#dragdrop {
+	margin: 0 auto;
+	text-align: center;
+}
+.dragMeActive {
+	opacity: .6;
+}
+.label {
+	position: absolute;
+	background: #0070c0;
+	left: -11px;
+	top: -11px;
+	width: 30px;
+	height: 30px;
+	line-height: 1.3;
+	text-align: center;
+	color: white;
+	z-index: 10;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px; /* future proofing */
+	-khtml-border-radius: 30px; /* for old Konqueror browsers */
+	-moz-box-shadow:    0px 1px 2px 0 rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, .7);
+	box-shadow:         0px 1px 2px 0 rgba(0, 0, 0, .7);
+}
+#dragdrop .checkAns {
+	opacity: 1;
+	cursor: pointer;
+}
+#dragdrop .checkAns.disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+.subnavi {
+	z-index: 31;
+}
+.msgContainer {
+	width:100%;
+	height:100%;
+	top:0;
+	left:0;
+	position:absolute;
+	text-align:center;
+	display: none;
+	z-index: 30;
+}
+.outoftries {
+	padding: 50px;
+	background: #333;
+	color: white;
+	position: relative;
+	display: inline-block;
+	margin-top: 200px;
+}
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+function correct (drop) {
+	$(drop).find(".tick").show();
+	//play sfx
+}
+function incorrect (drop, origin) {
+	//play sfx
+}
+function completed (obj) {
+	//obj.find(".completion").css("visibility", "visible");
+	enableSubmit (obj, true);
+}
+function allComplete () {
+	console.log("All done, next!");
+	enableScroll();	
+}
+function onDropped (drag, drop) {
+	//do nothing
+	//debugMsg("dropped: " + drag + " on " + drop);
+}
+function onDragged (drag) {
+	//debugMsg("dragged: " + drag);
+	var groupid = $(drag).attr("dragdrop_group");
+	enableSubmit ($(groupid), false);
+	$(".tick").hide();
+}
+function initDragDrop(sym) {
+	dragdrop.quiz_load(sym, {"aesthetics":true, "draggingclass":"", "instantfeedback":false});
+}
+
+function enableSubmit (obj, b) {
+	if (b) {
+		obj.find(".checkAns").removeClass("disabled");
+	} else {
+		obj.find(".checkAns").addClass("disabled");
+	}
+}
+
+$(document).ready (function () {
+	//dom ready
+	$(".tick").hide();
+	playAudio("../media/audio/17-Activity4.mp3");
+});
+
+$(window).load(function() {
+	//everything loaded including images
+	//$("#dragdrop .completion").css("visibility", "hidden");
+	var attempt = 0;
+	
+	$(".checkAns").click( function() {
+		if (!$(this).hasClass("disabled")) {
+			var id = "#" + $(this).parent().attr("id");
+			var result = dragdrop.checkAnswers (id);
+			debugMsg("Corrects: " + result.correct.length + ", Wrongs: " + result.wrong.length);
+
+			if (result.wrong.length > 0) {
+				playAudio(sndWrong);
+
+				//move back incorrect items
+				for (var i=0; i<result.wrong.length; i++) {
+					dragdrop.returnBackFromDrop(result.wrong[i].find(".dragMe"));
+				}
+
+				//disable submit button
+				enableSubmit ($(id), false);
+
+				attempt++;
+				if (attempt >= maxAttempts) {
+					$(".msgContainer").show();
+				}
+
+			} else {
+				playAudio(sndCorrect);
+
+				//disable all
+				for (var i=0; i<result.correct.length; i++) {
+					dragdrop.enableDragme (result.correct[i].find(".dragMe"), false);
+				}
+
+				//disbled submit
+				$(this).addClass("disabled");
+			}
+		}
+	});
+
+	disableScroll();
+	initDragDrop("#dragdrop");
+});
+//]]>
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="header">
+		<h1>Activity 4: Task 1</h1>
+	</div>
+	
+	<div class="content">
+		<p style="width:1000px;">
+			The steps to tie a reef knot are jumbled. <span class="actionsHL">Drag and drop</span> the step to arrange them in order.
+		</p>
+		
+		<div id="dragdrop">
+			<div style="display:inline-block; margin-bottom:80px;">
+				<div class="dropHere" data-ans="1"><div class="label">1</div><div class="tick tRight"></div></div>
+				<div class="dropHere" data-ans="2"><div class="label">2</div><div class="tick tRight"></div></div>
+				<div class="dropHere" data-ans="3"><div class="label">3</div><div class="tick tRight"></div></div>
+				<div class="dropHere" data-ans="4"><div class="label">4</div><div class="tick tRight"></div></div>
+				<div class="clearfix"></div>
+			</div>
+			<div style="display:inline-block; margin-bottom:20px;">
+				<div class="dragMe roundedcorner" data-ans="4" style="background-image:url('../media/placeholder.jpg');"></div>
+				<div class="dragMe roundedcorner" data-ans="2" style="background-image:url('../media/placeholder.jpg');"></div>
+				<div class="dragMe roundedcorner" data-ans="1" style="background-image:url('../media/placeholder.jpg');"></div>
+				<div class="dragMe roundedcorner" data-ans="3" style="background-image:url('../media/placeholder.jpg');"></div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="button noselect checkAns disabled" style="position:absolute; right:0;">Check my answer</div>
+		</div>
+
+		<div class="msgContainer">
+			<div class="outoftries">Out of attempts!</div>
+		</div>
+
+		<nav class="subnavi">
+			<ul>
+				<li data-target='sub1' class='active'>1</li>
+				<li data-target='sub2'>2</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+</body>
+</html>

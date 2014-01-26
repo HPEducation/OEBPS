@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+nav.subnavi {
+	text-align: right;
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+
+/* change colors below
+nav.subnavi ul li {
+	background: #ccc;
+	color:#eee;
+	border:2px solid white;
+	-moz-box-shadow:    0px 3px 3px 0 rgba(0, 0, 0, 0.7), inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: 0px 3px 3px 0 rgba(0, 0, 0, 0.7), inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	box-shadow:         0px 3px 3px 0 rgba(0, 0, 0, 0.7), inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+}
+
+nav.subnavi ul li.active {
+	background: #7957a1;
+	-moz-box-shadow:    inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	-webkit-box-shadow: inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+	box-shadow:         inset 0px -3px 10px rgba(0, 0, 0, 0.7);
+}
+*/
