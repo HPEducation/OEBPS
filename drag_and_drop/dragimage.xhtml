@@ -148,8 +148,7 @@ function completed (obj) {
 	enableSubmit (obj, true);
 }
 function allComplete () {
-	console.log("All done, next!");
-	enableScroll();	
+	debugMsg("All done, next!");
 }
 function onDropped (drag, drop) {
 	//do nothing
@@ -171,6 +170,9 @@ function enableSubmit (obj, b) {
 	} else {
 		obj.find(".checkAns").addClass("disabled");
 	}
+}
+function endActivity () {
+	enableScroll();
 }
 
 $(document).ready (function () {
@@ -204,6 +206,7 @@ $(window).load(function() {
 				attempt++;
 				if (attempt >= maxAttempts) {
 					$(".msgContainer").show();
+					endActivity();
 				}
 
 			} else {
@@ -216,6 +219,8 @@ $(window).load(function() {
 
 				//disbled submit
 				$(this).addClass("disabled");
+
+				endActivity();
 			}
 		}
 	});

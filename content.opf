@@ -1,16 +1,275 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" xml:lang="en" unique-identifier="uid" prefix="rendition: http://www.idpf.org/vocab/rendition/# cc: http://creativecommons.org/ns#">
 	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-		<dc:title id="title">test2</dc:title>
+		<dc:title id="title">Template</dc:title>
 		<dc:creator>ST eServ</dc:creator>
-		<dc:identifier id="uid">stee.stengg.eserv.test2</dc:identifier>
+		<dc:identifier id="uid">stee.stengg.eserv.Template</dc:identifier>
 		<dc:language>en-US</dc:language>
-		<meta property="dcterms:modified">2013-11-11T16:25:30Z</meta>
+		<meta property="dcterms:modified">2014-01-28T16:22:54Z</meta>
 		<dc:publisher>ST eServ</dc:publisher>
 		<dc:description>This is a Sample</dc:description>
 	</metadata>
 
 	<manifest>
+		<item href=".gitattributes" id="gitattributes" media-type="text/plain" />
+		<item href=".gitignore" id="gitignore" media-type="text/plain" />
+		<item href="content.opf" id="contentopf" media-type="text/plain" />
+		<item href="mcms.js.latest" id="mcmsjslatest" media-type="text/plain" />
+		<item href=".git/config" id="gitconfig" media-type="text/plain" />
+		<item href=".git/description" id="gitdescription" media-type="text/plain" />
+		<item href=".git/FETCH_HEAD" id="gitFETCH_HEAD" media-type="text/plain" />
+		<item href=".git/HEAD" id="gitHEAD" media-type="text/plain" />
+		<item href=".git/index" id="gitindex" media-type="text/plain" />
+		<item href=".git/hooks/README.sample" id="githooksREADMEsample" media-type="text/plain" />
+		<item href=".git/info/exclude" id="gitinfoexclude" media-type="text/plain" />
+		<item href=".git/logs/HEAD" id="gitlogsHEAD" media-type="text/plain" />
+		<item href=".git/logs/refs/heads/final" id="gitlogsrefsheadsfinal" media-type="text/plain" />
+		<item href=".git/logs/refs/remotes/origin/final" id="gitlogsrefsremotesoriginfinal" media-type="text/plain" />
+		<item href=".git/objects/00/6e953102ded2db8e217e4507de3baa8bcc976d" id="gitobjects006e953102ded2db8e217e4507de3baa8bcc976d" media-type="text/plain" />
+		<item href=".git/objects/01/26d09d86047d7a30de5fbbb98e392d14844353" id="gitobjects0126d09d86047d7a30de5fbbb98e392d14844353" media-type="text/plain" />
+		<item href=".git/objects/02/359460eb6414ff7979fc65cbf49f2f619b9e03" id="gitobjects02359460eb6414ff7979fc65cbf49f2f619b9e03" media-type="text/plain" />
+		<item href=".git/objects/03/06a1848772f10c441c5797a1e0d7834252303a" id="gitobjects0306a1848772f10c441c5797a1e0d7834252303a" media-type="text/plain" />
+		<item href=".git/objects/03/23862eeec5144ade3ec569056021fd1ae7c74e" id="gitobjects0323862eeec5144ade3ec569056021fd1ae7c74e" media-type="text/plain" />
+		<item href=".git/objects/03/39a47edbdf2cd8d7189d4deebb735b72c20162" id="gitobjects0339a47edbdf2cd8d7189d4deebb735b72c20162" media-type="text/plain" />
+		<item href=".git/objects/03/58aa155b8d3e4d36d8680f042b990989421eaf" id="gitobjects0358aa155b8d3e4d36d8680f042b990989421eaf" media-type="text/plain" />
+		<item href=".git/objects/05/124e48233937b4ab4b301353a8702320663667" id="gitobjects05124e48233937b4ab4b301353a8702320663667" media-type="text/plain" />
+		<item href=".git/objects/05/5677a84ce14441a312c78d934e7fe25249eaf4" id="gitobjects055677a84ce14441a312c78d934e7fe25249eaf4" media-type="text/plain" />
+		<item href=".git/objects/06/a47e74fa64779b821b62b5da26bf31920a94c3" id="gitobjects06a47e74fa64779b821b62b5da26bf31920a94c3" media-type="text/plain" />
+		<item href=".git/objects/06/f0523ab85e3ec753db7391d6e78bd102037f0e" id="gitobjects06f0523ab85e3ec753db7391d6e78bd102037f0e" media-type="text/plain" />
+		<item href=".git/objects/07/af79047753152fe3285c426f627dd396b439ff" id="gitobjects07af79047753152fe3285c426f627dd396b439ff" media-type="text/plain" />
+		<item href=".git/objects/07/df89fd3f47d0897d4d34f963bca7a1d7d9d60b" id="gitobjects07df89fd3f47d0897d4d34f963bca7a1d7d9d60b" media-type="text/plain" />
+		<item href=".git/objects/08/83662cf06f84948b7984aa9bb94c3faddbf327" id="gitobjects0883662cf06f84948b7984aa9bb94c3faddbf327" media-type="text/plain" />
+		<item href=".git/objects/08/928d19a3e67fb5ca2f56549cbcd5671b3fd7af" id="gitobjects08928d19a3e67fb5ca2f56549cbcd5671b3fd7af" media-type="text/plain" />
+		<item href=".git/objects/09/2a0ce0823b40b3ffe31ff543773cf14853b12a" id="gitobjects092a0ce0823b40b3ffe31ff543773cf14853b12a" media-type="text/plain" />
+		<item href=".git/objects/0a/99541ba71a7acd54c138f397748e6939e3aec7" id="gitobjects0a99541ba71a7acd54c138f397748e6939e3aec7" media-type="text/plain" />
+		<item href=".git/objects/0c/ee44d053c1da8283f3f5bfd7fa30147750e846" id="gitobjects0cee44d053c1da8283f3f5bfd7fa30147750e846" media-type="text/plain" />
+		<item href=".git/objects/0d/21d69f1454b6ccb4bda2c5b09da75ae4e66879" id="gitobjects0d21d69f1454b6ccb4bda2c5b09da75ae4e66879" media-type="text/plain" />
+		<item href=".git/objects/10/1bc437c17487d61839341fc3d1aa6da70eeb76" id="gitobjects101bc437c17487d61839341fc3d1aa6da70eeb76" media-type="text/plain" />
+		<item href=".git/objects/11/3c76a72e2832b73d90772d5fe2ef41159d00d3" id="gitobjects113c76a72e2832b73d90772d5fe2ef41159d00d3" media-type="text/plain" />
+		<item href=".git/objects/12/5872bc8db8e600498c521861a4f79a80042fad" id="gitobjects125872bc8db8e600498c521861a4f79a80042fad" media-type="text/plain" />
+		<item href=".git/objects/12/961bc9d1706a56e1428b74aef794b265d1b86e" id="gitobjects12961bc9d1706a56e1428b74aef794b265d1b86e" media-type="text/plain" />
+		<item href=".git/objects/12/ef08509be90ec39853f79ff13575f613a0d2ee" id="gitobjects12ef08509be90ec39853f79ff13575f613a0d2ee" media-type="text/plain" />
+		<item href=".git/objects/13/8e1f6cd80bb4c26a61887e289926500e7ab658" id="gitobjects138e1f6cd80bb4c26a61887e289926500e7ab658" media-type="text/plain" />
+		<item href=".git/objects/14/5bdf74c128fa18a902535a86fa70f5ccc6a397" id="gitobjects145bdf74c128fa18a902535a86fa70f5ccc6a397" media-type="text/plain" />
+		<item href=".git/objects/19/8b3ff07d801dffa2c42fcf3b67eb3295eef85f" id="gitobjects198b3ff07d801dffa2c42fcf3b67eb3295eef85f" media-type="text/plain" />
+		<item href=".git/objects/1a/a4b4987ada69a1d1e6afec81618d78c378c453" id="gitobjects1aa4b4987ada69a1d1e6afec81618d78c378c453" media-type="text/plain" />
+		<item href=".git/objects/1a/f33f53ee71d9889a4e72e1457caa23b4c54ae4" id="gitobjects1af33f53ee71d9889a4e72e1457caa23b4c54ae4" media-type="text/plain" />
+		<item href=".git/objects/1b/7b0f189f0711c9930b6afbdfcf8e02a292c698" id="gitobjects1b7b0f189f0711c9930b6afbdfcf8e02a292c698" media-type="text/plain" />
+		<item href=".git/objects/1c/7d25a85be3e69325b60e1106157377bbaa39db" id="gitobjects1c7d25a85be3e69325b60e1106157377bbaa39db" media-type="text/plain" />
+		<item href=".git/objects/1d/2fb70f77521e53680dddb322c5c9c01049842c" id="gitobjects1d2fb70f77521e53680dddb322c5c9c01049842c" media-type="text/plain" />
+		<item href=".git/objects/1d/40eb9b9845ddbb1e6fc8122fb8fb701640d167" id="gitobjects1d40eb9b9845ddbb1e6fc8122fb8fb701640d167" media-type="text/plain" />
+		<item href=".git/objects/1d/58086c09aba442cbccd8224be95a626820b474" id="gitobjects1d58086c09aba442cbccd8224be95a626820b474" media-type="text/plain" />
+		<item href=".git/objects/1d/dd09d792132e80db3fd1898d6092c9dd4b76c6" id="gitobjects1ddd09d792132e80db3fd1898d6092c9dd4b76c6" media-type="text/plain" />
+		<item href=".git/objects/1f/ce21e3252f8e6153b135fa2d7774945b4e0ff9" id="gitobjects1fce21e3252f8e6153b135fa2d7774945b4e0ff9" media-type="text/plain" />
+		<item href=".git/objects/20/1c100ae72048f6e8a4c74e1528505e16782b7b" id="gitobjects201c100ae72048f6e8a4c74e1528505e16782b7b" media-type="text/plain" />
+		<item href=".git/objects/22/6f989bc93bea1d36b379cf9127135070e5e8ad" id="gitobjects226f989bc93bea1d36b379cf9127135070e5e8ad" media-type="text/plain" />
+		<item href=".git/objects/24/f4487eb481ac1030199e74f6ca1fdca3b0ef77" id="gitobjects24f4487eb481ac1030199e74f6ca1fdca3b0ef77" media-type="text/plain" />
+		<item href=".git/objects/25/58713358b0c3eb782b51cbf8015cc13754fbe8" id="gitobjects2558713358b0c3eb782b51cbf8015cc13754fbe8" media-type="text/plain" />
+		<item href=".git/objects/25/c9c8a2a7045735533cc6f9f6a8f0393a46f598" id="gitobjects25c9c8a2a7045735533cc6f9f6a8f0393a46f598" media-type="text/plain" />
+		<item href=".git/objects/26/2c49fe294d3d36f7f289ed246882b609d41aef" id="gitobjects262c49fe294d3d36f7f289ed246882b609d41aef" media-type="text/plain" />
+		<item href=".git/objects/26/7a55a047da04295fe3dfff2e38951795962d68" id="gitobjects267a55a047da04295fe3dfff2e38951795962d68" media-type="text/plain" />
+		<item href=".git/objects/27/2ccbbe7dd5d640bcebb5d235eb9f8c91c8749a" id="gitobjects272ccbbe7dd5d640bcebb5d235eb9f8c91c8749a" media-type="text/plain" />
+		<item href=".git/objects/29/1c3d25d503f3789ea0d623c7adc4d126c7b1ee" id="gitobjects291c3d25d503f3789ea0d623c7adc4d126c7b1ee" media-type="text/plain" />
+		<item href=".git/objects/29/9b744139778aa8a3c0c02ac9902d3a129265c2" id="gitobjects299b744139778aa8a3c0c02ac9902d3a129265c2" media-type="text/plain" />
+		<item href=".git/objects/29/dc1385dd8f0e40ffbc334dd61d056a7f8bb645" id="gitobjects29dc1385dd8f0e40ffbc334dd61d056a7f8bb645" media-type="text/plain" />
+		<item href=".git/objects/2c/ca131e12b323d24ddc175972c8761971e5289f" id="gitobjects2cca131e12b323d24ddc175972c8761971e5289f" media-type="text/plain" />
+		<item href=".git/objects/2d/0006649b09764cb7d766ab1c21d79d99738070" id="gitobjects2d0006649b09764cb7d766ab1c21d79d99738070" media-type="text/plain" />
+		<item href=".git/objects/2d/8007e973d369c67cb91e2ebf32db5adb98bc64" id="gitobjects2d8007e973d369c67cb91e2ebf32db5adb98bc64" media-type="text/plain" />
+		<item href=".git/objects/2d/918ecd2ee51203459222ebf5823389363615d3" id="gitobjects2d918ecd2ee51203459222ebf5823389363615d3" media-type="text/plain" />
+		<item href=".git/objects/2d/a47729e1457725ab38ce5aae304e692b878dee" id="gitobjects2da47729e1457725ab38ce5aae304e692b878dee" media-type="text/plain" />
+		<item href=".git/objects/33/f866e85014420e2ec7b24f47d06d16b2686f96" id="gitobjects33f866e85014420e2ec7b24f47d06d16b2686f96" media-type="text/plain" />
+		<item href=".git/objects/34/743d61da274b1c3346c8c61bf9b91ebc312ed5" id="gitobjects34743d61da274b1c3346c8c61bf9b91ebc312ed5" media-type="text/plain" />
+		<item href=".git/objects/36/21bcede87edfac114b8393d5b5b8a5eb1c74f9" id="gitobjects3621bcede87edfac114b8393d5b5b8a5eb1c74f9" media-type="text/plain" />
+		<item href=".git/objects/36/4d738c0017db3fd3c9337ba4587b9414318123" id="gitobjects364d738c0017db3fd3c9337ba4587b9414318123" media-type="text/plain" />
+		<item href=".git/objects/38/7038cc3e7c9f554036fbb7d5394b7a3b80c9f0" id="gitobjects387038cc3e7c9f554036fbb7d5394b7a3b80c9f0" media-type="text/plain" />
+		<item href=".git/objects/39/8e3178742d4127030b50945e04c24c693f8e41" id="gitobjects398e3178742d4127030b50945e04c24c693f8e41" media-type="text/plain" />
+		<item href=".git/objects/3b/0027c9945c81e99e9f92eae92811ff2c3ed370" id="gitobjects3b0027c9945c81e99e9f92eae92811ff2c3ed370" media-type="text/plain" />
+		<item href=".git/objects/3c/45e151e615afb98b892dbc01b8b1a3be5bfd9c" id="gitobjects3c45e151e615afb98b892dbc01b8b1a3be5bfd9c" media-type="text/plain" />
+		<item href=".git/objects/3d/16956976f277606e699167586f25cdf2c9868e" id="gitobjects3d16956976f277606e699167586f25cdf2c9868e" media-type="text/plain" />
+		<item href=".git/objects/3d/46303c9071211160c8bc88a38d2072637a0202" id="gitobjects3d46303c9071211160c8bc88a38d2072637a0202" media-type="text/plain" />
+		<item href=".git/objects/3d/6805dff02de4f12668b1733a6ca99e81b09e0c" id="gitobjects3d6805dff02de4f12668b1733a6ca99e81b09e0c" media-type="text/plain" />
+		<item href=".git/objects/3d/6d9ec33a25b079ebfc0223984d38eb937853a1" id="gitobjects3d6d9ec33a25b079ebfc0223984d38eb937853a1" media-type="text/plain" />
+		<item href=".git/objects/3e/dddc49171662e76924bae18c38dd1d6f51ef37" id="gitobjects3edddc49171662e76924bae18c38dd1d6f51ef37" media-type="text/plain" />
+		<item href=".git/objects/41/2eeda78dc9de1186c2e0e1526764af82ab3431" id="gitobjects412eeda78dc9de1186c2e0e1526764af82ab3431" media-type="text/plain" />
+		<item href=".git/objects/41/63399e56cfaa3832e41fa50b7746ab27954076" id="gitobjects4163399e56cfaa3832e41fa50b7746ab27954076" media-type="text/plain" />
+		<item href=".git/objects/43/05f70738c52e1f94a736318326e16dddabdbaa" id="gitobjects4305f70738c52e1f94a736318326e16dddabdbaa" media-type="text/plain" />
+		<item href=".git/objects/46/22a1e21ce137ded1ebc08e1401a700c3d4f674" id="gitobjects4622a1e21ce137ded1ebc08e1401a700c3d4f674" media-type="text/plain" />
+		<item href=".git/objects/46/44e9359905b5f79b5a6796b375d2e71698a996" id="gitobjects4644e9359905b5f79b5a6796b375d2e71698a996" media-type="text/plain" />
+		<item href=".git/objects/47/50482ad93aa6f3e3d7c1905bdb059afbda387c" id="gitobjects4750482ad93aa6f3e3d7c1905bdb059afbda387c" media-type="text/plain" />
+		<item href=".git/objects/47/bcc8833901acb90e253cb3b48f4ff2635f0ed4" id="gitobjects47bcc8833901acb90e253cb3b48f4ff2635f0ed4" media-type="text/plain" />
+		<item href=".git/objects/49/8747841b46e921a117400924d51500a8494122" id="gitobjects498747841b46e921a117400924d51500a8494122" media-type="text/plain" />
+		<item href=".git/objects/4d/1bc4ca2f68a9c4b0707738f4cded82f5d9b3c1" id="gitobjects4d1bc4ca2f68a9c4b0707738f4cded82f5d9b3c1" media-type="text/plain" />
+		<item href=".git/objects/4e/4cbbb1473c92415afd575db6c84924910237d6" id="gitobjects4e4cbbb1473c92415afd575db6c84924910237d6" media-type="text/plain" />
+		<item href=".git/objects/50/84b61195e4b58c0aaeb556a8891f4bfaaeaa84" id="gitobjects5084b61195e4b58c0aaeb556a8891f4bfaaeaa84" media-type="text/plain" />
+		<item href=".git/objects/53/8a4af0ebcf348615ffeb7628e25fc269b17ce2" id="gitobjects538a4af0ebcf348615ffeb7628e25fc269b17ce2" media-type="text/plain" />
+		<item href=".git/objects/54/9c03d5878f525458a5b9b4f0449979de42d9a6" id="gitobjects549c03d5878f525458a5b9b4f0449979de42d9a6" media-type="text/plain" />
+		<item href=".git/objects/54/ea4dbd8d0997fece30913bdcf6b5ec3ed48c94" id="gitobjects54ea4dbd8d0997fece30913bdcf6b5ec3ed48c94" media-type="text/plain" />
+		<item href=".git/objects/57/b32103d6ba6dfb3d0a288c6c0d1e49a337873d" id="gitobjects57b32103d6ba6dfb3d0a288c6c0d1e49a337873d" media-type="text/plain" />
+		<item href=".git/objects/57/d994e6c59579223058dd310e918c47063b3454" id="gitobjects57d994e6c59579223058dd310e918c47063b3454" media-type="text/plain" />
+		<item href=".git/objects/58/adb18a18d89d0eaaf0e7334fa31f941fe11f54" id="gitobjects58adb18a18d89d0eaaf0e7334fa31f941fe11f54" media-type="text/plain" />
+		<item href=".git/objects/59/0eacde6987940f2e6eeeed47558f0072e0aa8e" id="gitobjects590eacde6987940f2e6eeeed47558f0072e0aa8e" media-type="text/plain" />
+		<item href=".git/objects/5b/380fb38a04e93e8b6608964356a0996953c8aa" id="gitobjects5b380fb38a04e93e8b6608964356a0996953c8aa" media-type="text/plain" />
+		<item href=".git/objects/5b/92622f05cd50dc8ed53058f488e706ccfed446" id="gitobjects5b92622f05cd50dc8ed53058f488e706ccfed446" media-type="text/plain" />
+		<item href=".git/objects/5c/b6e483621671a73b743f114eac67faeb6324e4" id="gitobjects5cb6e483621671a73b743f114eac67faeb6324e4" media-type="text/plain" />
+		<item href=".git/objects/5d/4f4c7f3543b5dae7d6663efc9fc31fd74eb240" id="gitobjects5d4f4c7f3543b5dae7d6663efc9fc31fd74eb240" media-type="text/plain" />
+		<item href=".git/objects/60/474acc682e5f2fae0ff64be5109ab12f05fb6e" id="gitobjects60474acc682e5f2fae0ff64be5109ab12f05fb6e" media-type="text/plain" />
+		<item href=".git/objects/61/11e9773356e08d11619bb330ea2d5d0e1ec48a" id="gitobjects6111e9773356e08d11619bb330ea2d5d0e1ec48a" media-type="text/plain" />
+		<item href=".git/objects/61/6001392e4c620a18fba5735c59128961e9f2f3" id="gitobjects616001392e4c620a18fba5735c59128961e9f2f3" media-type="text/plain" />
+		<item href=".git/objects/63/50f70ef544c5598d1d73c9a97e0e5a0cb8f485" id="gitobjects6350f70ef544c5598d1d73c9a97e0e5a0cb8f485" media-type="text/plain" />
+		<item href=".git/objects/65/f55daa06935059142d061d533ae9c64d4a9986" id="gitobjects65f55daa06935059142d061d533ae9c64d4a9986" media-type="text/plain" />
+		<item href=".git/objects/68/5134295eaa99dca9ed28e67cbb47781b5cbc98" id="gitobjects685134295eaa99dca9ed28e67cbb47781b5cbc98" media-type="text/plain" />
+		<item href=".git/objects/68/b47296b1dc51972350cc71ff1e9d54b5d9db31" id="gitobjects68b47296b1dc51972350cc71ff1e9d54b5d9db31" media-type="text/plain" />
+		<item href=".git/objects/6a/b00f640e035934dde9dffe733c5bb53191a542" id="gitobjects6ab00f640e035934dde9dffe733c5bb53191a542" media-type="text/plain" />
+		<item href=".git/objects/6b/ef3d618440733207fd9b815a6a319b85613cd4" id="gitobjects6bef3d618440733207fd9b815a6a319b85613cd4" media-type="text/plain" />
+		<item href=".git/objects/6e/5dde94fa3eded0f079f56ab49f8cf08105d841" id="gitobjects6e5dde94fa3eded0f079f56ab49f8cf08105d841" media-type="text/plain" />
+		<item href=".git/objects/6e/8a0e304d7b7592f859d02035af72447e6527b2" id="gitobjects6e8a0e304d7b7592f859d02035af72447e6527b2" media-type="text/plain" />
+		<item href=".git/objects/6e/d2e8d5a95593696c584ebcd14e62d3a9577033" id="gitobjects6ed2e8d5a95593696c584ebcd14e62d3a9577033" media-type="text/plain" />
+		<item href=".git/objects/75/118a258bbc7b33c8922fbc49e664ce5e06c114" id="gitobjects75118a258bbc7b33c8922fbc49e664ce5e06c114" media-type="text/plain" />
+		<item href=".git/objects/75/a5f935dcc2b328db734302b528a87cde77d0a6" id="gitobjects75a5f935dcc2b328db734302b528a87cde77d0a6" media-type="text/plain" />
+		<item href=".git/objects/76/a9c988f133a36c5be6643a74bb277e1cfd1f9d" id="gitobjects76a9c988f133a36c5be6643a74bb277e1cfd1f9d" media-type="text/plain" />
+		<item href=".git/objects/76/dfa1ff460c644367a6037a6415e37028929a0c" id="gitobjects76dfa1ff460c644367a6037a6415e37028929a0c" media-type="text/plain" />
+		<item href=".git/objects/77/63c2bdeb0d4c15ca13ed720318581af766a676" id="gitobjects7763c2bdeb0d4c15ca13ed720318581af766a676" media-type="text/plain" />
+		<item href=".git/objects/79/be6d9ddd32cc8d0c0686c5c84a4a9f9e1bdd6e" id="gitobjects79be6d9ddd32cc8d0c0686c5c84a4a9f9e1bdd6e" media-type="text/plain" />
+		<item href=".git/objects/7b/08e76562d295055cd5504162e0e9329885d0c9" id="gitobjects7b08e76562d295055cd5504162e0e9329885d0c9" media-type="text/plain" />
+		<item href=".git/objects/7b/0fc664cd29a041393d90d4756ecc75803d2bcf" id="gitobjects7b0fc664cd29a041393d90d4756ecc75803d2bcf" media-type="text/plain" />
+		<item href=".git/objects/7c/3237995ecaf35e2b09b960f3424ace5e532c51" id="gitobjects7c3237995ecaf35e2b09b960f3424ace5e532c51" media-type="text/plain" />
+		<item href=".git/objects/7d/078d95dc075081571fad9031abc80e2795bc7e" id="gitobjects7d078d95dc075081571fad9031abc80e2795bc7e" media-type="text/plain" />
+		<item href=".git/objects/7d/cc2d1f9bd7e5754d895d4ba5358f47959cf686" id="gitobjects7dcc2d1f9bd7e5754d895d4ba5358f47959cf686" media-type="text/plain" />
+		<item href=".git/objects/7d/d058d406fb8fb9c6e162f9e65641911d6e387d" id="gitobjects7dd058d406fb8fb9c6e162f9e65641911d6e387d" media-type="text/plain" />
+		<item href=".git/objects/7e/b7bc42bbb76aed007b807da552ff8ad2f111a2" id="gitobjects7eb7bc42bbb76aed007b807da552ff8ad2f111a2" media-type="text/plain" />
+		<item href=".git/objects/7e/d1419dcaa944e07ba09c28b4178f8dd1717795" id="gitobjects7ed1419dcaa944e07ba09c28b4178f8dd1717795" media-type="text/plain" />
+		<item href=".git/objects/81/6ac18f2aaa4dc269510a14c00e9418974a2b57" id="gitobjects816ac18f2aaa4dc269510a14c00e9418974a2b57" media-type="text/plain" />
+		<item href=".git/objects/81/f82c01d6f8be24b5a0d34831d0a917367fdcc8" id="gitobjects81f82c01d6f8be24b5a0d34831d0a917367fdcc8" media-type="text/plain" />
+		<item href=".git/objects/82/3a6419bc1a850b1719c3ed0cb7e07dc37980b8" id="gitobjects823a6419bc1a850b1719c3ed0cb7e07dc37980b8" media-type="text/plain" />
+		<item href=".git/objects/83/54d4bd54ab671e9d5d446e776924c1433a325d" id="gitobjects8354d4bd54ab671e9d5d446e776924c1433a325d" media-type="text/plain" />
+		<item href=".git/objects/84/64026ef2b9a9630955ad417ee37fc67818c1f2" id="gitobjects8464026ef2b9a9630955ad417ee37fc67818c1f2" media-type="text/plain" />
+		<item href=".git/objects/84/a01b8f506b05feb07f3fc947343e0d8b365433" id="gitobjects84a01b8f506b05feb07f3fc947343e0d8b365433" media-type="text/plain" />
+		<item href=".git/objects/85/addc79862bd1cfb35f2a892a394421762db8f0" id="gitobjects85addc79862bd1cfb35f2a892a394421762db8f0" media-type="text/plain" />
+		<item href=".git/objects/86/0fbe9d9f02a932f8f3c14ecc9a30e8ca8a46ee" id="gitobjects860fbe9d9f02a932f8f3c14ecc9a30e8ca8a46ee" media-type="text/plain" />
+		<item href=".git/objects/87/26be16a52b0dd29969350b1d2756b73a1538d9" id="gitobjects8726be16a52b0dd29969350b1d2756b73a1538d9" media-type="text/plain" />
+		<item href=".git/objects/87/2adf2b70cffe675b93506cc356f805364df606" id="gitobjects872adf2b70cffe675b93506cc356f805364df606" media-type="text/plain" />
+		<item href=".git/objects/88/578b9bdac521d4d5e039d7bc2d1435d93877c6" id="gitobjects88578b9bdac521d4d5e039d7bc2d1435d93877c6" media-type="text/plain" />
+		<item href=".git/objects/8a/2d7fb53db8d7c7035a89d2f18669755473c1e0" id="gitobjects8a2d7fb53db8d7c7035a89d2f18669755473c1e0" media-type="text/plain" />
+		<item href=".git/objects/8a/464c6cefc674cdbc1273245c2ffab94e51dd75" id="gitobjects8a464c6cefc674cdbc1273245c2ffab94e51dd75" media-type="text/plain" />
+		<item href=".git/objects/8a/e080f1d6a14914bcec8759aa450577ab59e289" id="gitobjects8ae080f1d6a14914bcec8759aa450577ab59e289" media-type="text/plain" />
+		<item href=".git/objects/8b/ad9d5e1fc9410fdb92ca9e8354bd589a8f39ec" id="gitobjects8bad9d5e1fc9410fdb92ca9e8354bd589a8f39ec" media-type="text/plain" />
+		<item href=".git/objects/8c/3f42215fc0f0b6874bce2c588b69bd0ce0b475" id="gitobjects8c3f42215fc0f0b6874bce2c588b69bd0ce0b475" media-type="text/plain" />
+		<item href=".git/objects/8e/ddf498879f43458901122441158c2049de7831" id="gitobjects8eddf498879f43458901122441158c2049de7831" media-type="text/plain" />
+		<item href=".git/objects/90/09f18aa0591dd7b4ebea7ea7f73e6cfb5821dc" id="gitobjects9009f18aa0591dd7b4ebea7ea7f73e6cfb5821dc" media-type="text/plain" />
+		<item href=".git/objects/91/648ef0f022ce9a2907a1dfb74958a31feaf6a7" id="gitobjects91648ef0f022ce9a2907a1dfb74958a31feaf6a7" media-type="text/plain" />
+		<item href=".git/objects/91/c0ddce987a741df1c89fd36e8f06a17e9b5957" id="gitobjects91c0ddce987a741df1c89fd36e8f06a17e9b5957" media-type="text/plain" />
+		<item href=".git/objects/92/147ab596e07888392353f012e9ab807168fb9d" id="gitobjects92147ab596e07888392353f012e9ab807168fb9d" media-type="text/plain" />
+		<item href=".git/objects/92/4cf62c097715faca16f000e0e993044ebca18e" id="gitobjects924cf62c097715faca16f000e0e993044ebca18e" media-type="text/plain" />
+		<item href=".git/objects/92/dced90e524b9ffd84652105593baceb988a164" id="gitobjects92dced90e524b9ffd84652105593baceb988a164" media-type="text/plain" />
+		<item href=".git/objects/92/f1296f5d2ec3f4699a4525e0719d0fe2a2b938" id="gitobjects92f1296f5d2ec3f4699a4525e0719d0fe2a2b938" media-type="text/plain" />
+		<item href=".git/objects/94/429a3db4f3a416598bc423845535905b943a4f" id="gitobjects94429a3db4f3a416598bc423845535905b943a4f" media-type="text/plain" />
+		<item href=".git/objects/97/15e8a03e552c4b3437bb645e81c5e9cf153dc8" id="gitobjects9715e8a03e552c4b3437bb645e81c5e9cf153dc8" media-type="text/plain" />
+		<item href=".git/objects/97/3afea10c3af08241293fd41d4a642477963a5b" id="gitobjects973afea10c3af08241293fd41d4a642477963a5b" media-type="text/plain" />
+		<item href=".git/objects/97/47196f2817049e33fd16fbeb2e0ea8185126ff" id="gitobjects9747196f2817049e33fd16fbeb2e0ea8185126ff" media-type="text/plain" />
+		<item href=".git/objects/97/8f86b3bc91537718619f1da53c2806044cfddd" id="gitobjects978f86b3bc91537718619f1da53c2806044cfddd" media-type="text/plain" />
+		<item href=".git/objects/99/814af55b2fcc2615d2b0db49e420775eac3b82" id="gitobjects99814af55b2fcc2615d2b0db49e420775eac3b82" media-type="text/plain" />
+		<item href=".git/objects/99/eb64ecc3d13b042acf447a11ec071557ece061" id="gitobjects99eb64ecc3d13b042acf447a11ec071557ece061" media-type="text/plain" />
+		<item href=".git/objects/9a/ef1e8527ddd262417e2d1b4bc0732f928fbeee" id="gitobjects9aef1e8527ddd262417e2d1b4bc0732f928fbeee" media-type="text/plain" />
+		<item href=".git/objects/9d/25ded3d599c947a770e1319c543409ca8579a1" id="gitobjects9d25ded3d599c947a770e1319c543409ca8579a1" media-type="text/plain" />
+		<item href=".git/objects/9e/2e08b24a3bbc2f7571bc73c4122003e1b1c231" id="gitobjects9e2e08b24a3bbc2f7571bc73c4122003e1b1c231" media-type="text/plain" />
+		<item href=".git/objects/a1/510b7ba5e7a37bd2d17aa9e713c2b2a66268c7" id="gitobjectsa1510b7ba5e7a37bd2d17aa9e713c2b2a66268c7" media-type="text/plain" />
+		<item href=".git/objects/a1/692564c515862d5907c34258fced7afdce67fd" id="gitobjectsa1692564c515862d5907c34258fced7afdce67fd" media-type="text/plain" />
+		<item href=".git/objects/a2/e6edcfe3d4b89cd0bb347e3ffafcc4e9a284ad" id="gitobjectsa2e6edcfe3d4b89cd0bb347e3ffafcc4e9a284ad" media-type="text/plain" />
+		<item href=".git/objects/a3/ab64e7faf24d7582f9e7a996bcd8fc969db2e7" id="gitobjectsa3ab64e7faf24d7582f9e7a996bcd8fc969db2e7" media-type="text/plain" />
+		<item href=".git/objects/a4/ab2d0d8857f1ed7133ae17bc8ce6c80cda0630" id="gitobjectsa4ab2d0d8857f1ed7133ae17bc8ce6c80cda0630" media-type="text/plain" />
+		<item href=".git/objects/a4/c5da65203e1dd2bdb026add3ea7ebcc15b16f1" id="gitobjectsa4c5da65203e1dd2bdb026add3ea7ebcc15b16f1" media-type="text/plain" />
+		<item href=".git/objects/a5/24904c0bccc7588a11a05fca45d62b6837da40" id="gitobjectsa524904c0bccc7588a11a05fca45d62b6837da40" media-type="text/plain" />
+		<item href=".git/objects/a6/59d795944edb215b07876b2fe2958f553acf9d" id="gitobjectsa659d795944edb215b07876b2fe2958f553acf9d" media-type="text/plain" />
+		<item href=".git/objects/a6/fd527e0af6f1b50000aebbe053ae24468cbbe3" id="gitobjectsa6fd527e0af6f1b50000aebbe053ae24468cbbe3" media-type="text/plain" />
+		<item href=".git/objects/a8/10169f18b8e0bb4075b6a7f3dd5c09a170f4cf" id="gitobjectsa810169f18b8e0bb4075b6a7f3dd5c09a170f4cf" media-type="text/plain" />
+		<item href=".git/objects/a8/3ebac46df55013b61ea24731b478bc92af4dfa" id="gitobjectsa83ebac46df55013b61ea24731b478bc92af4dfa" media-type="text/plain" />
+		<item href=".git/objects/aa/74b1969640b0dbd161c9ec65f62d94669a6de9" id="gitobjectsaa74b1969640b0dbd161c9ec65f62d94669a6de9" media-type="text/plain" />
+		<item href=".git/objects/aa/b984e7bed9a385ca50102b4c35e20d327135e8" id="gitobjectsaab984e7bed9a385ca50102b4c35e20d327135e8" media-type="text/plain" />
+		<item href=".git/objects/aa/ef88bf2bf5eeb2e0cf91d6de62008c3bddbfca" id="gitobjectsaaef88bf2bf5eeb2e0cf91d6de62008c3bddbfca" media-type="text/plain" />
+		<item href=".git/objects/ab/b1ed29c6921d0080130991cc2c9a0059cf3be1" id="gitobjectsabb1ed29c6921d0080130991cc2c9a0059cf3be1" media-type="text/plain" />
+		<item href=".git/objects/ac/34f23bb857c91a039e09d572ff903f439818aa" id="gitobjectsac34f23bb857c91a039e09d572ff903f439818aa" media-type="text/plain" />
+		<item href=".git/objects/ac/be9b01eea7f887aea1f6203a535a6c2b9df38c" id="gitobjectsacbe9b01eea7f887aea1f6203a535a6c2b9df38c" media-type="text/plain" />
+		<item href=".git/objects/ad/03cf3e26a46dfbd593c9f682e173fc7c2a8a71" id="gitobjectsad03cf3e26a46dfbd593c9f682e173fc7c2a8a71" media-type="text/plain" />
+		<item href=".git/objects/ad/58a0b1c9f70b0305aea1e9cb620a077d3779a4" id="gitobjectsad58a0b1c9f70b0305aea1e9cb620a077d3779a4" media-type="text/plain" />
+		<item href=".git/objects/ad/712e7aa166049202564eff3ecd3bcc70b87db2" id="gitobjectsad712e7aa166049202564eff3ecd3bcc70b87db2" media-type="text/plain" />
+		<item href=".git/objects/ae/7025dedda7791efeaf376c9ab3769015c31200" id="gitobjectsae7025dedda7791efeaf376c9ab3769015c31200" media-type="text/plain" />
+		<item href=".git/objects/b0/089a656438f4bfd101d9d6dd38e75a6415bdde" id="gitobjectsb0089a656438f4bfd101d9d6dd38e75a6415bdde" media-type="text/plain" />
+		<item href=".git/objects/b1/67022088a81a48b11da4b6c34e327c523a5837" id="gitobjectsb167022088a81a48b11da4b6c34e327c523a5837" media-type="text/plain" />
+		<item href=".git/objects/b2/73ff111d219c9b9a8b96d57683d0075fb7871a" id="gitobjectsb273ff111d219c9b9a8b96d57683d0075fb7871a" media-type="text/plain" />
+		<item href=".git/objects/b3/b8e8c3375619ecdce86f2a521e0bd9c63eb8cb" id="gitobjectsb3b8e8c3375619ecdce86f2a521e0bd9c63eb8cb" media-type="text/plain" />
+		<item href=".git/objects/b5/8f0150678d9f7344ed1b036aae033d874ae1e0" id="gitobjectsb58f0150678d9f7344ed1b036aae033d874ae1e0" media-type="text/plain" />
+		<item href=".git/objects/b6/828e9f1f04b9a90043828690fe1e9779bb3ea8" id="gitobjectsb6828e9f1f04b9a90043828690fe1e9779bb3ea8" media-type="text/plain" />
+		<item href=".git/objects/b6/8c0601a48d24d54c58a4689f89aba5bc7b3327" id="gitobjectsb68c0601a48d24d54c58a4689f89aba5bc7b3327" media-type="text/plain" />
+		<item href=".git/objects/b7/2edda5087904711f70acac0a02f1bae4aeec86" id="gitobjectsb72edda5087904711f70acac0a02f1bae4aeec86" media-type="text/plain" />
+		<item href=".git/objects/b7/4231ee4d9b8ff93fb279e65d529ba11dd69ef6" id="gitobjectsb74231ee4d9b8ff93fb279e65d529ba11dd69ef6" media-type="text/plain" />
+		<item href=".git/objects/b8/9b0756301ce2725b100a64bcf603ee90cb2961" id="gitobjectsb89b0756301ce2725b100a64bcf603ee90cb2961" media-type="text/plain" />
+		<item href=".git/objects/b8/a04cfb70fdc48a1abc0057d842a2b00aff4b2e" id="gitobjectsb8a04cfb70fdc48a1abc0057d842a2b00aff4b2e" media-type="text/plain" />
+		<item href=".git/objects/b8/cf3aa259bd4cb51c0e806436d44deb6ad61f49" id="gitobjectsb8cf3aa259bd4cb51c0e806436d44deb6ad61f49" media-type="text/plain" />
+		<item href=".git/objects/b9/d6bd92f5f09e195d6bc19536500b6494dd2b75" id="gitobjectsb9d6bd92f5f09e195d6bc19536500b6494dd2b75" media-type="text/plain" />
+		<item href=".git/objects/bb/e08391e34b060853e1f248801725279412d3d2" id="gitobjectsbbe08391e34b060853e1f248801725279412d3d2" media-type="text/plain" />
+		<item href=".git/objects/bc/1f1567f2f49e2c9efa2a4448e5eb4cc977b663" id="gitobjectsbc1f1567f2f49e2c9efa2a4448e5eb4cc977b663" media-type="text/plain" />
+		<item href=".git/objects/bc/abb92f8513f0531e3f39c4ff19ce6ca72968ff" id="gitobjectsbcabb92f8513f0531e3f39c4ff19ce6ca72968ff" media-type="text/plain" />
+		<item href=".git/objects/bf/f5801a440a51c52afd9ceb319dda401d8f7362" id="gitobjectsbff5801a440a51c52afd9ceb319dda401d8f7362" media-type="text/plain" />
+		<item href=".git/objects/c0/55986c81c589e056791f1c1225a395e1ac9f6d" id="gitobjectsc055986c81c589e056791f1c1225a395e1ac9f6d" media-type="text/plain" />
+		<item href=".git/objects/c1/a72576d8ec3fed57f2426a780a8f865002d606" id="gitobjectsc1a72576d8ec3fed57f2426a780a8f865002d606" media-type="text/plain" />
+		<item href=".git/objects/c3/b444662268b91ca8cb11aae0b582044a09d7b2" id="gitobjectsc3b444662268b91ca8cb11aae0b582044a09d7b2" media-type="text/plain" />
+		<item href=".git/objects/c4/564093dde56e043cbe546611d53bef07cc9bad" id="gitobjectsc4564093dde56e043cbe546611d53bef07cc9bad" media-type="text/plain" />
+		<item href=".git/objects/c5/155769827ef3a658cb68272c695b8ebdff2492" id="gitobjectsc5155769827ef3a658cb68272c695b8ebdff2492" media-type="text/plain" />
+		<item href=".git/objects/c5/b8b0cc68babb4219382caf5545e623965bf4ad" id="gitobjectsc5b8b0cc68babb4219382caf5545e623965bf4ad" media-type="text/plain" />
+		<item href=".git/objects/c7/a997da016a4dd138720526ba6aceb880b3a8ca" id="gitobjectsc7a997da016a4dd138720526ba6aceb880b3a8ca" media-type="text/plain" />
+		<item href=".git/objects/c8/2ac059e13b59ab36db1dd7f86b4d0255606a99" id="gitobjectsc82ac059e13b59ab36db1dd7f86b4d0255606a99" media-type="text/plain" />
+		<item href=".git/objects/ca/d3a22fdd218d478c8056e4d2836398506cce3b" id="gitobjectscad3a22fdd218d478c8056e4d2836398506cce3b" media-type="text/plain" />
+		<item href=".git/objects/cd/a3523ba655b77c534b22bc1d9a142d65d521ad" id="gitobjectscda3523ba655b77c534b22bc1d9a142d65d521ad" media-type="text/plain" />
+		<item href=".git/objects/cd/a48780ca19375e84fffd3cbb660fbb75a6dea9" id="gitobjectscda48780ca19375e84fffd3cbb660fbb75a6dea9" media-type="text/plain" />
+		<item href=".git/objects/ce/1715285a28dd31bbfd7fd8f09d8b59307b1172" id="gitobjectsce1715285a28dd31bbfd7fd8f09d8b59307b1172" media-type="text/plain" />
+		<item href=".git/objects/ce/8d1556bf601600f839b0c33f73b379f871b5fc" id="gitobjectsce8d1556bf601600f839b0c33f73b379f871b5fc" media-type="text/plain" />
+		<item href=".git/objects/ce/97de31a7e4ea2ec3bd6b57c14d729ef36c1576" id="gitobjectsce97de31a7e4ea2ec3bd6b57c14d729ef36c1576" media-type="text/plain" />
+		<item href=".git/objects/cf/af6ca01be947739f2a211d37ec5c21b926ecfa" id="gitobjectscfaf6ca01be947739f2a211d37ec5c21b926ecfa" media-type="text/plain" />
+		<item href=".git/objects/cf/feb64ff1059bb5c1f084f76dc5022139aa36ef" id="gitobjectscffeb64ff1059bb5c1f084f76dc5022139aa36ef" media-type="text/plain" />
+		<item href=".git/objects/d0/3c9bfe34fda774ff985c5ecc9350902242867a" id="gitobjectsd03c9bfe34fda774ff985c5ecc9350902242867a" media-type="text/plain" />
+		<item href=".git/objects/d2/8d5a7ef18b9fedc4d40c975db0e58c6267cca3" id="gitobjectsd28d5a7ef18b9fedc4d40c975db0e58c6267cca3" media-type="text/plain" />
+		<item href=".git/objects/d2/8de2bd6a7ad22170f330b6d0ee3347a70e0299" id="gitobjectsd28de2bd6a7ad22170f330b6d0ee3347a70e0299" media-type="text/plain" />
+		<item href=".git/objects/d3/956c9eb33eeb8bb3d4ae76aeb84cb029b7c61b" id="gitobjectsd3956c9eb33eeb8bb3d4ae76aeb84cb029b7c61b" media-type="text/plain" />
+		<item href=".git/objects/d3/b5f3098c2294af886a69238f50fcce4e105e47" id="gitobjectsd3b5f3098c2294af886a69238f50fcce4e105e47" media-type="text/plain" />
+		<item href=".git/objects/d4/218697987b86f88b2a79db59b6679f7444f557" id="gitobjectsd4218697987b86f88b2a79db59b6679f7444f557" media-type="text/plain" />
+		<item href=".git/objects/d5/37e18d1ec8e2439588d9249e6ab1fe6efb2345" id="gitobjectsd537e18d1ec8e2439588d9249e6ab1fe6efb2345" media-type="text/plain" />
+		<item href=".git/objects/d5/575f5ab7deea4a27fff153bedab2417cc35fc5" id="gitobjectsd5575f5ab7deea4a27fff153bedab2417cc35fc5" media-type="text/plain" />
+		<item href=".git/objects/d5/5c1506204e5361f892df4e937c9c2d3c9c5fcb" id="gitobjectsd55c1506204e5361f892df4e937c9c2d3c9c5fcb" media-type="text/plain" />
+		<item href=".git/objects/d5/e7a3939f5d8917975f6281e3660f1512a12680" id="gitobjectsd5e7a3939f5d8917975f6281e3660f1512a12680" media-type="text/plain" />
+		<item href=".git/objects/dd/baacc0207ff5d56be34c4648befa05f59235e6" id="gitobjectsddbaacc0207ff5d56be34c4648befa05f59235e6" media-type="text/plain" />
+		<item href=".git/objects/de/8235ffd13689dd36e690000c13f06b73d03291" id="gitobjectsde8235ffd13689dd36e690000c13f06b73d03291" media-type="text/plain" />
+		<item href=".git/objects/df/d176429f653d12a2b5bbb9f2ef8b99ac8acf1b" id="gitobjectsdfd176429f653d12a2b5bbb9f2ef8b99ac8acf1b" media-type="text/plain" />
+		<item href=".git/objects/e0/3cbc92d5c06fa01127d24ffc4dddbcf25e97a0" id="gitobjectse03cbc92d5c06fa01127d24ffc4dddbcf25e97a0" media-type="text/plain" />
+		<item href=".git/objects/e1/2104d174c62b7f083e755f4989ce37595780c0" id="gitobjectse12104d174c62b7f083e755f4989ce37595780c0" media-type="text/plain" />
+		<item href=".git/objects/e1/de63125444ea8d40422a54438fe561e16598e6" id="gitobjectse1de63125444ea8d40422a54438fe561e16598e6" media-type="text/plain" />
+		<item href=".git/objects/e3/2a5693d7a37cccee3c4e4758fb66bd2702d037" id="gitobjectse32a5693d7a37cccee3c4e4758fb66bd2702d037" media-type="text/plain" />
+		<item href=".git/objects/e4/f75b9d531561f9ef36560f3369cd30c4b60626" id="gitobjectse4f75b9d531561f9ef36560f3369cd30c4b60626" media-type="text/plain" />
+		<item href=".git/objects/e7/5bdbe0c116f52f809d40f0a159cdd2ffa50604" id="gitobjectse75bdbe0c116f52f809d40f0a159cdd2ffa50604" media-type="text/plain" />
+		<item href=".git/objects/e8/85cdb5d8afa2a871576c8f2e71c88047c1bcb3" id="gitobjectse885cdb5d8afa2a871576c8f2e71c88047c1bcb3" media-type="text/plain" />
+		<item href=".git/objects/e9/4e2475588d5d091acdafb4978f86108c3fefba" id="gitobjectse94e2475588d5d091acdafb4978f86108c3fefba" media-type="text/plain" />
+		<item href=".git/objects/e9/5f5d23a38241864a731e22c94d2add4c5a2ec0" id="gitobjectse95f5d23a38241864a731e22c94d2add4c5a2ec0" media-type="text/plain" />
+		<item href=".git/objects/e9/ce9d2e74597bc03bef780375caa9c4b764857a" id="gitobjectse9ce9d2e74597bc03bef780375caa9c4b764857a" media-type="text/plain" />
+		<item href=".git/objects/ea/804b5e8d6eb01bb9f6c26442054860ba12aca8" id="gitobjectsea804b5e8d6eb01bb9f6c26442054860ba12aca8" media-type="text/plain" />
+		<item href=".git/objects/eb/c2c6950c9af8838dc738bdb2f4144ab24e5ef8" id="gitobjectsebc2c6950c9af8838dc738bdb2f4144ab24e5ef8" media-type="text/plain" />
+		<item href=".git/objects/ec/8ae041c3dc2404ed1d5e11f48d118ed5c2d3e9" id="gitobjectsec8ae041c3dc2404ed1d5e11f48d118ed5c2d3e9" media-type="text/plain" />
+		<item href=".git/objects/ed/03a5ee29e12981968ad0b93eec46d0dbf04c5b" id="gitobjectsed03a5ee29e12981968ad0b93eec46d0dbf04c5b" media-type="text/plain" />
+		<item href=".git/objects/ed/e4bc2147075d2a7c244c004797bb302e603b06" id="gitobjectsede4bc2147075d2a7c244c004797bb302e603b06" media-type="text/plain" />
+		<item href=".git/objects/ed/f8d106942791935f6cda9e3a29dcc55fb53c0b" id="gitobjectsedf8d106942791935f6cda9e3a29dcc55fb53c0b" media-type="text/plain" />
+		<item href=".git/objects/ef/7432107950d6f5706a031f081a188887c128b5" id="gitobjectsef7432107950d6f5706a031f081a188887c128b5" media-type="text/plain" />
+		<item href=".git/objects/f0/a99baa182b1408e172add8c526072e9c81ffbf" id="gitobjectsf0a99baa182b1408e172add8c526072e9c81ffbf" media-type="text/plain" />
+		<item href=".git/objects/f0/b6539cb153eeeec95feeef38ddfb956e834426" id="gitobjectsf0b6539cb153eeeec95feeef38ddfb956e834426" media-type="text/plain" />
+		<item href=".git/objects/f1/0edd7cd4476b1e133e834d6092aa644fb26834" id="gitobjectsf10edd7cd4476b1e133e834d6092aa644fb26834" media-type="text/plain" />
+		<item href=".git/objects/f1/cc57735ddb6be7920d627e13c72ebb8927a78c" id="gitobjectsf1cc57735ddb6be7920d627e13c72ebb8927a78c" media-type="text/plain" />
+		<item href=".git/objects/f2/110f6103ba3b650d4a4a315824c553f679c397" id="gitobjectsf2110f6103ba3b650d4a4a315824c553f679c397" media-type="text/plain" />
+		<item href=".git/objects/f8/d748da53f1afd003550d7ec7f816ee96bee974" id="gitobjectsf8d748da53f1afd003550d7ec7f816ee96bee974" media-type="text/plain" />
+		<item href=".git/objects/fb/1972f2b000990c837a76a3f9eda7b680739c45" id="gitobjectsfb1972f2b000990c837a76a3f9eda7b680739c45" media-type="text/plain" />
+		<item href=".git/objects/fb/b5ba38b364205545c0459dd1d21a1591949e47" id="gitobjectsfbb5ba38b364205545c0459dd1d21a1591949e47" media-type="text/plain" />
+		<item href=".git/objects/fc/ae39097fa24960349f852e7ea239b6769f5849" id="gitobjectsfcae39097fa24960349f852e7ea239b6769f5849" media-type="text/plain" />
+		<item href=".git/objects/fe/7155698cfddb86096f1ae8ee22a45c85445174" id="gitobjectsfe7155698cfddb86096f1ae8ee22a45c85445174" media-type="text/plain" />
+		<item href=".git/objects/ff/7e265931cc50095ad209c56cf7fe9c29e36fa3" id="gitobjectsff7e265931cc50095ad209c56cf7fe9c29e36fa3" media-type="text/plain" />
+		<item href=".git/objects/ff/d5dc6680a84ba93119e892fd850ffe56887a1d" id="gitobjectsffd5dc6680a84ba93119e892fd850ffe56887a1d" media-type="text/plain" />
+		<item href=".git/refs/heads/final" id="gitrefsheadsfinal" media-type="text/plain" />
+		<item href=".git/refs/remotes/origin/final" id="gitrefsremotesoriginfinal" media-type="text/plain" />
 		<item href="Add_edge_animation_to_template/animation.an" id="Add_edge_animation_to_templateanimationan" media-type="adobe/animate" />
 		<item href="Add_edge_animation_to_template/animation.html" id="Add_edge_animation_to_templateanimationhtml" media-type="application/xhtml+xml" properties="scripted" />
 		<item href="Add_edge_animation_to_template/animation2.an" id="Add_edge_animation_to_templateanimation2an" media-type="adobe/animate" />
@@ -21,16 +280,26 @@
 		<item href="Add_edge_animation_to_template/animation_edge.js" id="Add_edge_animation_to_templateanimation_edgejs" media-type="text/javascript" />
 		<item href="Add_edge_animation_to_template/animation_edgeActions.js" id="Add_edge_animation_to_templateanimation_edgeActionsjs" media-type="text/javascript" />
 		<item href="Add_edge_animation_to_template/animation_edgePreload.js" id="Add_edge_animation_to_templateanimation_edgePreloadjs" media-type="text/javascript" />
+		<item href="Add_edge_animation_to_template/NOTE.txt" id="Add_edge_animation_to_templateNOTEtxt" media-type="text/plain" />
 		<item href="Add_edge_animation_to_template/slide.html" id="Add_edge_animation_to_templateslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="Add_edge_animation_to_template/slide.html.transcript" id="Add_edge_animation_to_templateslidehtmltranscript" media-type="text/plain" />
 		<item href="Add_edge_animation_to_template/edge_includes/edge.1.5.0.min.js" id="Add_edge_animation_to_templateedge_includesedge150minjs" media-type="text/javascript" />
 		<item href="Add_edge_animation_to_template/edge_includes/edge.2.0.0.min.js" id="Add_edge_animation_to_templateedge_includesedge200minjs" media-type="text/javascript" />
 		<item href="Add_edge_animation_to_template/edge_includes/jquery-1.7.1.min.js" id="Add_edge_animation_to_templateedge_includesjquery171minjs" media-type="text/javascript" />
 		<item href="blink/index.html" id="blinkindexhtml" media-type="application/xhtml+xml" properties="scripted" />
-		<item href="drag_and_drop/slide.html" id="drag_and_dropslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="drag_and_drop/dragimage.xhtml" id="drag_and_dropdragimagexhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="drag_and_drop/dragimage.xhtml.transcript" id="drag_and_dropdragimagexhtmltranscript" media-type="text/plain" />
+		<item href="drag_and_drop/slide.xhtml" id="drag_and_dropslidexhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="drag_and_drop/slide.xhtml.transcript" id="drag_and_dropslidexhtmltranscript" media-type="text/plain" />
+		<item href="drag_and_drop/subnavi-local.css" id="drag_and_dropsubnavilocalcss" media-type="text/css" />
+		<item href="drag_and_drop/subnavi-local.js" id="drag_and_dropsubnavilocaljs" media-type="text/javascript" />
 		<item href="drag_and_drop/images/bgactivity1.jpg" id="drag_and_dropimagesbgactivity1jpg" media-type="image/jpeg" />
-		<item href="global_assets/css/default.bak.css" id="global_assetscssdefaultbakcss" media-type="text/css" />
-		<item href="global_assets/css/default.bak2.css" id="global_assetscssdefaultbak2css" media-type="text/css" />
+		<item href="drag_and_drop/images/droparea.png" id="drag_and_dropimagesdropareapng" media-type="image/png" />
+		<item href="global_assets/app.js" id="global_assetsappjs" media-type="text/javascript" />
+		<item href="global_assets/version.txt" id="global_assetsversiontxt" media-type="text/plain" />
 		<item href="global_assets/css/default.css" id="global_assetscssdefaultcss" media-type="text/css" />
+		<item href="global_assets/css/responsivevideo.css" id="global_assetscssresponsivevideocss" media-type="text/css" />
+		<item href="global_assets/fonts/arial.ttf" id="global_assetsfontsarialttf" media-type="application/vnd.ms-opentype" />
 		<item href="global_assets/images/closebtn.png" id="global_assetsimagesclosebtnpng" media-type="image/png" />
 		<item href="global_assets/images/mainBG.jpg" id="global_assetsimagesmainBGjpg" media-type="image/jpeg" />
 		<item href="global_assets/jscrollpane/jquery.jscrollpane.css" id="global_assetsjscrollpanejqueryjscrollpanecss" media-type="text/css" />
@@ -44,14 +313,11 @@
 		<item href="global_assets/lib/container.js" id="global_assetslibcontainerjs" media-type="text/javascript" />
 		<item href="global_assets/lib/jquery.easing.js" id="global_assetslibjqueryeasingjs" media-type="text/javascript" />
 		<item href="global_assets/lib/jquery.min.js" id="global_assetslibjqueryminjs" media-type="text/javascript" />
-		<item href="global_assets/lib/jquery.mobile.min.css" id="global_assetslibjquerymobilemincss" media-type="text/css" />
-		<item href="global_assets/lib/jquery.mobile.min.js" id="global_assetslibjquerymobileminjs" media-type="text/javascript" />
 		<item href="global_assets/lib/lib.js" id="global_assetsliblibjs" media-type="text/javascript" />
 		<item href="global_assets/lib/mcms.js" id="global_assetslibmcmsjs" media-type="text/javascript" />
 		<item href="global_assets/lib/shared.js" id="global_assetslibsharedjs" media-type="text/javascript" />
 		<item href="global_assets/lib/storage.js" id="global_assetslibstoragejs" media-type="text/javascript" />
-		<item href="global_assets/lib/draganddrop/draganddrop - Copy (2).js" id="global_assetslibdraganddropdraganddropCopy2js" media-type="text/javascript" />
-		<item href="global_assets/lib/draganddrop/draganddrop - Copy.js" id="global_assetslibdraganddropdraganddropCopyjs" media-type="text/javascript" />
+		<item href="global_assets/lib/versions-140117.1917.txt" id="global_assetslibversions1401171917txt" media-type="text/plain" />
 		<item href="global_assets/lib/draganddrop/draganddrop.css" id="global_assetslibdraganddropdraganddropcss" media-type="text/css" />
 		<item href="global_assets/lib/draganddrop/draganddrop.js" id="global_assetslibdraganddropdraganddropjs" media-type="text/javascript" />
 		<item href="global_assets/lib/matchinglines/matchinglines.css" id="global_assetslibmatchinglinesmatchinglinescss" media-type="text/css" />
@@ -67,22 +333,36 @@
 		<item href="global_assets/popup/popup_static_info.png" id="global_assetspopuppopup_static_infopng" media-type="image/png" />
 		<item href="global_assets/popup2/popup.css" id="global_assetspopup2popupcss" media-type="text/css" />
 		<item href="global_assets/popup2/popup.js" id="global_assetspopup2popupjs" media-type="text/javascript" />
-		<item href="HPEdu_MCMSTemplate/slide.html" id="HPEdu_MCMSTemplateslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="global_assets/popup3/popup.css" id="global_assetspopup3popupcss" media-type="text/css" />
+		<item href="global_assets/popup3/popup.js" id="global_assetspopup3popupjs" media-type="text/javascript" />
+		<item href="global_assets/subnavi/subnavi.css" id="global_assetssubnavisubnavicss" media-type="text/css" />
+		<item href="global_assets/subnavi/subnavi.js" id="global_assetssubnavisubnavijs" media-type="text/javascript" />
+		<item href="HPEdu_MCMSTemplate/slide.xhtml" id="HPEdu_MCMSTemplateslidexhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="HPEdu_MCMSTemplate/slide.xhtml.transcript" id="HPEdu_MCMSTemplateslidexhtmltranscript" media-type="text/plain" />
 		<item href="matching_lines_onrelease/slide.html" id="matching_lines_onreleaseslidehtml" media-type="application/xhtml+xml" properties="scripted" />
 		<item href="matching_lines_onrelease_dragdraw/slide.html" id="matching_lines_onrelease_dragdrawslidehtml" media-type="application/xhtml+xml" properties="scripted" />
 		<item href="matching_lines_onsubmit/slide.html" id="matching_lines_onsubmitslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="media/placeholder.jpg" id="mediaplaceholderjpg" media-type="image/jpeg" />
+		<item href="media/audio/142608__autistic-lucario__error.mp3" id="mediaaudio142608__autisticlucario__errormp3" media-type="audio/mpeg" />
+		<item href="media/audio/Loaded_S-Mark_E_B-8068_hifi.mp3" id="mediaaudioLoaded_SMark_E_B8068_hifimp3" media-type="audio/mpeg" />
 		<item href="offline_data_store/slide.html" id="offline_data_storeslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="offline_data_store/slide.html.transcript" id="offline_data_storeslidehtmltranscript" media-type="text/plain" />
 		<item href="offline_data_zretrieve/slide.html" id="offline_data_zretrieveslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="offline_data_zretrieve/slide.html.transcript" id="offline_data_zretrieveslidehtmltranscript" media-type="text/plain" />
+		<item href="popup_sample_from_eServ/arial.ttf" id="popup_sample_from_eServarialttf" media-type="application/vnd.ms-opentype" />
 		<item href="popup_sample_from_eServ/slide.an" id="popup_sample_from_eServslidean" media-type="adobe/animate" />
 		<item href="popup_sample_from_eServ/slide.html" id="popup_sample_from_eServslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_sample_from_eServ/slide.html.transcript" id="popup_sample_from_eServslidehtmltranscript" media-type="text/plain" />
 		<item href="popup_sample_from_eServ/slide_edge.js" id="popup_sample_from_eServslide_edgejs" media-type="text/javascript" />
 		<item href="popup_sample_from_eServ/slide_edgeActions.js" id="popup_sample_from_eServslide_edgeActionsjs" media-type="text/javascript" />
 		<item href="popup_sample_from_eServ/slide_edgePreload.js" id="popup_sample_from_eServslide_edgePreloadjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/audio/.DS_Store" id="popup_sample_from_eServaudioDS_Store" media-type="text/plain" />
 		<item href="popup_sample_from_eServ/audio/Stream.mp3" id="popup_sample_from_eServaudioStreammp3" media-type="audio/mpeg" />
 		<item href="popup_sample_from_eServ/edge_includes/edge.1.0.0.min.js" id="popup_sample_from_eServedge_includesedge100minjs" media-type="text/javascript" />
 		<item href="popup_sample_from_eServ/edge_includes/jquery-1.7.1.min.js" id="popup_sample_from_eServedge_includesjquery171minjs" media-type="text/javascript" />
 		<item href="popup_sample_from_eServ/edge_includes/jquery.easing.1.3.js" id="popup_sample_from_eServedge_includesjqueryeasing13js" media-type="text/javascript" />
 		<item href="popup_sample_from_eServ/edge_includes/json2_min.js" id="popup_sample_from_eServedge_includesjson2_minjs" media-type="text/javascript" />
+		<item href="popup_sample_from_eServ/images/.DS_Store" id="popup_sample_from_eServimagesDS_Store" media-type="text/plain" />
 		<item href="popup_sample_from_eServ/images/background.jpg" id="popup_sample_from_eServimagesbackgroundjpg" media-type="image/jpeg" />
 		<item href="popup_sample_from_eServ/images/btn_next0001.png" id="popup_sample_from_eServimagesbtn_next0001png" media-type="image/png" />
 		<item href="popup_sample_from_eServ/images/button.png" id="popup_sample_from_eServimagesbuttonpng" media-type="image/png" />
@@ -95,18 +375,19 @@
 		<item href="popup_sample_from_eServ/toc/toc_modified.js" id="popup_sample_from_eServtoctoc_modifiedjs" media-type="text/javascript" />
 		<item href="popup_with_jquery_mobile/slide.html" id="popup_with_jquery_mobileslidehtml" media-type="application/xhtml+xml" properties="scripted" />
 		<item href="popup_with_jquery_mobile/images/www.jpg" id="popup_with_jquery_mobileimageswwwjpg" media-type="image/jpeg" />
-		<item href="popup_with_scroll/slide.html" id="popup_with_scrollslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_with_scroll/slide.xhtml" id="popup_with_scrollslidexhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_with_scroll/slide.xhtml.transcript" id="popup_with_scrollslidexhtmltranscript" media-type="text/plain" />
 		<item href="popup_with_scroll/images/1.jpg" id="popup_with_scrollimages1jpg" media-type="image/jpeg" />
-		<item href="popup_with_scroll/images/18XM203-rounds-in-bandoleer.JPG" id="popup_with_scrollimages18XM203roundsinbandoleerJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/18XM203-rounds-in-bandoleer.jpg" id="popup_with_scrollimages18XM203roundsinbandoleerjpg" media-type="image/jpeg" />
 		<item href="popup_with_scroll/images/76mm-Smoke-Grenades.jpg" id="popup_with_scrollimages76mmSmokeGrenadesjpg" media-type="image/jpeg" />
-		<item href="popup_with_scroll/images/ammo.JPG" id="popup_with_scrollimagesammoJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/ammo.jpg" id="popup_with_scrollimagesammojpg" media-type="image/jpeg" />
 		<item href="popup_with_scroll/images/driver.png" id="popup_with_scrollimagesdriverpng" media-type="image/png" />
 		<item href="popup_with_scroll/images/GL.png" id="popup_with_scrollimagesGLpng" media-type="image/png" />
-		<item href="popup_with_scroll/images/GPMG-and-spare-barrel.JPG" id="popup_with_scrollimagesGPMGandsparebarrelJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/GPMG-and-spare-barrel.jpg" id="popup_with_scrollimagesGPMGandsparebarreljpg" media-type="image/jpeg" />
 		<item href="popup_with_scroll/images/LAW.png" id="popup_with_scrollimagesLAWpng" media-type="image/png" />
-		<item href="popup_with_scroll/images/matador.JPG" id="popup_with_scrollimagesmatadorJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/matador.jpg" id="popup_with_scrollimagesmatadorjpg" media-type="image/jpeg" />
 		<item href="popup_with_scroll/images/medic.png" id="popup_with_scrollimagesmedicpng" media-type="image/png" />
-		<item href="popup_with_scroll/images/Night-vision-monocular.JPG" id="popup_with_scrollimagesNightvisionmonocularJPG" media-type="image/jpeg" />
+		<item href="popup_with_scroll/images/Night-vision-monocular.jpg" id="popup_with_scrollimagesNightvisionmonocularjpg" media-type="image/jpeg" />
 		<item href="popup_with_scroll/images/Periscope.jpg" id="popup_with_scrollimagesPeriscopejpg" media-type="image/jpeg" />
 		<item href="popup_with_scroll/images/PRC-940-manpack-set.png" id="popup_with_scrollimagesPRC940manpacksetpng" media-type="image/png" />
 		<item href="popup_with_scroll/images/SAW.png" id="popup_with_scrollimagesSAWpng" media-type="image/png" />
@@ -114,14 +395,43 @@
 		<item href="popup_with_scroll/images/signaller.png" id="popup_with_scrollimagessignallerpng" media-type="image/png" />
 		<item href="popup_with_scroll/images/temp.jpg" id="popup_with_scrollimagestempjpg" media-type="image/jpeg" />
 		<item href="popup_with_scroll/images/VRC-946-radio-set.png" id="popup_with_scrollimagesVRC946radiosetpng" media-type="image/png" />
+		<item href="popup_with_scroll2/slide.xhtml" id="popup_with_scroll2slidexhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="popup_with_scroll2/slide.xhtml.transcript" id="popup_with_scroll2slidexhtmltranscript" media-type="text/plain" />
+		<item href="popup_with_scroll2/images/1.jpg" id="popup_with_scroll2images1jpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/18XM203-rounds-in-bandoleer.jpg" id="popup_with_scroll2images18XM203roundsinbandoleerjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/76mm-Smoke-Grenades.jpg" id="popup_with_scroll2images76mmSmokeGrenadesjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/ammo.jpg" id="popup_with_scroll2imagesammojpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/driver.png" id="popup_with_scroll2imagesdriverpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/GL.png" id="popup_with_scroll2imagesGLpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/GPMG-and-spare-barrel.jpg" id="popup_with_scroll2imagesGPMGandsparebarreljpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/LAW.png" id="popup_with_scroll2imagesLAWpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/matador.jpg" id="popup_with_scroll2imagesmatadorjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/medic.png" id="popup_with_scroll2imagesmedicpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/Night-vision-monocular.jpg" id="popup_with_scroll2imagesNightvisionmonocularjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/Periscope.jpg" id="popup_with_scroll2imagesPeriscopejpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/PRC-940-manpack-set.png" id="popup_with_scroll2imagesPRC940manpacksetpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/SAW.png" id="popup_with_scroll2imagesSAWpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/sectCommd.png" id="popup_with_scroll2imagessectCommdpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/signaller.png" id="popup_with_scroll2imagessignallerpng" media-type="image/png" />
+		<item href="popup_with_scroll2/images/temp.jpg" id="popup_with_scroll2imagestempjpg" media-type="image/jpeg" />
+		<item href="popup_with_scroll2/images/VRC-946-radio-set.png" id="popup_with_scroll2imagesVRC946radiosetpng" media-type="image/png" />
 		<item href="scrollbar/slide.html" id="scrollbarslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="scrollbar/slide.html.transcript" id="scrollbarslidehtmltranscript" media-type="text/plain" />
+		<item href="subnavi/slide.xhtml" id="subnavislidexhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="subnavi/slide2.xhtml" id="subnavislide2xhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="subnavi/slide3.xhtml" id="subnavislide3xhtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="subnavi/subnavi-local.css" id="subnavisubnavilocalcss" media-type="text/css" />
+		<item href="subnavi/subnavi-local.js" id="subnavisubnavilocaljs" media-type="text/javascript" />
 		<item href="videotest/slide.html" id="videotestslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="videotest/slide.html.transcript" id="videotestslidehtmltranscript" media-type="text/plain" />
 		<item href="videotest/videos/FlyThrough.jpg" id="videotestvideosFlyThroughjpg" media-type="image/jpeg" />
 		<item href="videotest/videos/FlyThrough.mp4" id="videotestvideosFlyThroughmp4" media-type="video/mp4" />
 		<item href="video_seeking/slide.html" id="video_seekingslidehtml" media-type="application/xhtml+xml" properties="scripted" />
+		<item href="video_seeking/slide.html.transcript" id="video_seekingslidehtmltranscript" media-type="text/plain" />
 		<item href="video_seeking/videos/FlyThrough.jpg" id="video_seekingvideosFlyThroughjpg" media-type="image/jpeg" />
 		<item href="video_seeking/videos/FlyThrough.mp4" id="video_seekingvideosFlyThroughmp4" media-type="video/mp4" />
 		<item href="toc.xhtml" id="toc" media-type="application/xhtml+xml" properties="nav"/>
+		<item href="../fullscreen" id="fullscreen" media-type="text/plain"/>
 	</manifest>
 
 	<spine>
@@ -129,8 +439,9 @@
 		<itemref idref="Add_edge_animation_to_templateanimation2html"/>
 		<itemref idref="Add_edge_animation_to_templateslidehtml"/>
 		<itemref idref="blinkindexhtml"/>
-		<itemref idref="drag_and_dropslidehtml"/>
-		<itemref idref="HPEdu_MCMSTemplateslidehtml"/>
+		<itemref idref="drag_and_dropdragimagexhtml"/>
+		<itemref idref="drag_and_dropslidexhtml"/>
+		<itemref idref="HPEdu_MCMSTemplateslidexhtml"/>
 		<itemref idref="matching_lines_onreleaseslidehtml"/>
 		<itemref idref="matching_lines_onrelease_dragdrawslidehtml"/>
 		<itemref idref="matching_lines_onsubmitslidehtml"/>
@@ -138,8 +449,12 @@
 		<itemref idref="offline_data_zretrieveslidehtml"/>
 		<itemref idref="popup_sample_from_eServslidehtml"/>
 		<itemref idref="popup_with_jquery_mobileslidehtml"/>
-		<itemref idref="popup_with_scrollslidehtml"/>
+		<itemref idref="popup_with_scrollslidexhtml"/>
+		<itemref idref="popup_with_scroll2slidexhtml"/>
 		<itemref idref="scrollbarslidehtml"/>
+		<itemref idref="subnavislidexhtml"/>
+		<itemref idref="subnavislide2xhtml"/>
+		<itemref idref="subnavislide3xhtml"/>
 		<itemref idref="videotestslidehtml"/>
 		<itemref idref="video_seekingslidehtml"/>
 	</spine>
