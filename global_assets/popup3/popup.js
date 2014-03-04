@@ -67,6 +67,8 @@ $(document).ready (function () {
 
 	$('.popup').hide();
 
+	$('.popup:not(.noclosebtn)').append("<div class='closebtn'></div>");
+
 	$('.closebtn').addClass('pointer');
 
 	$('.closebtn').click (function () {
