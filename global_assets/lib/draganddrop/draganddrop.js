@@ -697,12 +697,15 @@ dragdrop.showAnswer = showAnswer;
 
 function findMyFriend (id, attr, value) {
 	var dragId = '';
-	$(id).each(function() {
-		if (!$(this).hasClass('dragMeActive')) {
+	//console.log($(id).not('.dragMeActive'));
+	$(id).not('.dragMeActive').each(function() {
+		//make sure not in a dropped area
+		if (!$(this).parent().hasClass('dragdrop_dropped')) {
+			//console.log($(this).html());
 			//console.log($(this).attr(attr) + ' ' + value);
 			if ($(this).attr(attr) == value) {
 				dragId = $(this).attr('id');
-				console.log($(this));
+				//console.log($(this).html());
 				return false;
 			}
 		}

@@ -307,3 +307,8 @@ ul, ol {
 .instructions {
 	font-style: italic;
 }
+
+.note {
+	font-style: italic;
+	font-size: smaller;
+}
