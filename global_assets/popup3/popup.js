@@ -72,7 +72,7 @@ $(document).ready (function () {
 	$('.closebtn').addClass('pointer');
 
 	$('.closebtn').click (function () {
-		hidePopup($(this).parent());
+		hidePopup(currentPopup);
 	});
 
 	$(".overlay").click(function() {
