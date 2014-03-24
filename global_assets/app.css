@@ -36,3 +36,52 @@
 	border-radius: 40px; /* future proofing *4
 	-khtml-border-radius: 30px; /* for old Konqueror browsers */
 }
+#videoContainer {
+	position: relative;
+}
+.videoTitleOverlay {
+	display: table;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.videoTitleOverlay > div {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;	
+}
+.videoTitleBar {
+	height: 175px;
+	background: rgba(0, 0, 0, .7);
+	border-top: 5px solid rgba(40, 65, 102, .7);
+	border-bottom: 5px solid rgba(40, 65, 102, .7);
+	width: 100%;
+	display: table;
+}
+.videoTitleBar > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+.videoTitleContainer {
+	text-align: center;
+	color: white;
+}
+.videoTitleContainer h4 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-size: 24px;
+}
+.videoTitleContainer button {
+	background: url("images/bluebutton.jpg") left top no-repeat;
+	width: 200px;
+	height: 57px;
+	border: 0px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}

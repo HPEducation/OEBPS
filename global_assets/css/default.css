@@ -20,9 +20,6 @@ html, body {
 body {
 	font-family: 'Arial', sans-serif;
 	font-size: 62.5%;  /* Gives a base of 10px */
-	width:1168px;
-	/*height:650px; do we need to set this? probably not if page gonna scroll */
-	background:url('../images/mainBG.jpg') no-repeat left top;
 }
 
 *:focus {
@@ -86,9 +83,11 @@ section, article, aside, footer, header, nav, hgroup {
 }
 
 .wrapper {
+	background:url('../images/mainBG.jpg') no-repeat left top;
+	width: 1128px; /* 1168px total with padding */
+	/*height:650px; do we need to set this? probably not if page gonna scroll */
 	margin: 0 auto;
 	padding: 20px; /* set main padding */
-	width: auto;
 	position: relative;
 	/*min-height:960px;*/
 }
