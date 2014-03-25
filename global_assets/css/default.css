@@ -86,6 +86,7 @@ section, article, aside, footer, header, nav, hgroup {
 	background:url('../images/mainBG.jpg') no-repeat left top;
 	width: 1128px; /* 1168px total with padding */
 	/*height:650px; do we need to set this? probably not if page gonna scroll */
+	min-height: 610px;
 	margin: 0 auto;
 	padding: 20px; /* set main padding */
 	position: relative;
@@ -310,4 +311,36 @@ ul, ol {
 .note {
 	font-style: italic;
 	font-size: smaller;
+}
+
+.nopadding {
+	padding: 0 !important;
+}
+
+table.congrats {
+	width: 100%;
+	height: 650px;
+	background:#ff6666;
+}
+
+table.congrats td {
+	padding: 20px;
+}
+
+table.congrats td.restricted {
+	text-align:center;
+	vertical-align:top;
+	font: 18px Arial;
+	color: black;
+}
+
+table.congrats td.congratsTitle {
+	font: Bold 40px Arial;
+	text-align: left;
+	vertical-align:middle;
+}
+
+table.congrats td.congratsFooter {
+	text-align: left;
+	vertical-align:bottom;
 }
