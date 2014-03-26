@@ -93,6 +93,12 @@ section, article, aside, footer, header, nav, hgroup {
 	/*min-height:960px;*/
 }
 
+.nopadding {
+	padding: 0 !important;
+	width: 1168px;
+	height: 650px;
+}
+
 .header, header {
 	margin-top:-20px;
 	display: table;
@@ -313,13 +319,9 @@ ul, ol {
 	font-size: smaller;
 }
 
-.nopadding {
-	padding: 0 !important;
-}
-
 table.congrats {
 	width: 100%;
-	height: 650px;
+	height: 100%;
 	background:#ff6666;
 }
 
