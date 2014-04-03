@@ -41,6 +41,7 @@ function showPopup (id) {
 }
 
 function hidePopup (id) {
+	if (typeof id === "undefined") id = currentPopup;
 	$(id).hide();
 	$(".jlightbox").hide();
 	clearAllTImers();
@@ -67,7 +68,7 @@ $(document).ready (function () {
 
 	$('.popup').hide();
 
-	$('.popup:not(.noclosebtn)').append("<div class='closebtn'></div>");
+	$('.popup:not(.noclosebtn, .modalwindow)').append("<div class='closebtn'></div>");
 
 	$('.closebtn').addClass('pointer');
 
@@ -76,7 +77,7 @@ $(document).ready (function () {
 	});
 
 	$(".overlay").click(function() {
-		if (typeof currentPopup !== 'undefined' && currentPopup != '') {
+		if (typeof currentPopup !== 'undefined' && currentPopup != '' && !$(currentPopup).hasClass("modalwindow")) {
 			hidePopup(currentPopup);
 		}
 	});
