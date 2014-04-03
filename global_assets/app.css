@@ -90,7 +90,6 @@
 .bubble 
 {
 	position: relative;
-	display: inline-block;
 	padding: 10px;
 	background: #FFFFFF;
 	-webkit-border-radius: 10px;
@@ -103,7 +102,6 @@
 	content: '';
 	position: absolute;
 	border-style: solid;
-	border-color: transparent #FFFFFF;
 	display: block;
 	width: 0;
 	z-index: 1;
@@ -113,42 +111,117 @@
 	content: '';
 	position: absolute;
 	border-style: solid;
-	border-color: transparent #7F7F7F;
 	display: block;
 	width: 0;
 	z-index: 0;
 }
-.bubbleTopLeft:after {
-	border-width: 4px 18px 4px 0;
-	margin-top: -4px;
-	left: -18px;
-	top: 30%;
-}
-.bubbleTopLeft:before {
-	border-width: 6px 20px 6px 0;
-	margin-top: -6px;
-	left: -23px;
-	top: 30%;
-}
 .bubbleBottomLeft:after {
-	border-width: 4px 18px 4px 0;
-	margin-top: -4px;
-	left: -18px;
-	top: 70%;
+	border-color: #FFFFFF transparent;
+	border-width: 18px 4px 0;
+	margin-left: -4px;
+	bottom: -18px;
+	left: 15%;
 }
 .bubbleBottomLeft:before {
+	border-color: #7F7F7F transparent;
+	border-width: 20px 6px 0;
+	margin-left: -6px;
+	bottom: -23px;
+	left: 15%;
+}
+.bubbleBottomRight:after {
+	border-color: #FFFFFF transparent;
+	border-width: 18px 4px 0;
+	margin-left: -4px;
+	bottom: -18px;
+	left: 85%;
+}
+.bubbleBottomRight:before {
+	border-color: #7F7F7F transparent;
+	border-width: 20px 6px 0;
+	margin-left: -6px;
+	bottom: -23px;
+	left: 85%;
+}
+.bubbleTopLeft:after {
+	border-color: #FFFFFF transparent;
+	border-width: 0 4px 18px;
+	margin-left: -4px;
+	top: -18px;
+	left: 15%;
+}
+.bubbleTopLeft:before {
+	border-color: #7F7F7F transparent;
+	border-width: 0 6px 20px;
+	margin-left: -6px;
+	top: -23px;
+	left: 15%;
+}
+.bubbleTopRight:after {
+	border-color: #FFFFFF transparent;
+	border-width: 0 4px 18px;
+	margin-left: -4px;
+	top: -18px;
+	left: 85%;
+}
+.bubbleTopRight:before {
+	border-color: #7F7F7F transparent;
+	border-width: 0 6px 20px;
+	margin-left: -6px;
+	top: -23px;
+	left: 85%;
+}
+.bubbleLeftTop:after {
+	border-color: transparent #FFFFFF;
+	border-width: 4px 18px 4px 0;
+	margin-top: -4px;
+	left: -18px;
+	top: 30%;
+}
+.bubbleLeftTop:before {
+	border-color: transparent #7F7F7F;
+	border-width: 6px 20px 6px 0;
+	margin-top: -6px;
+	left: -23px;
+	top: 30%;
+}
+.bubbleLeftBottom:after {
+	border-color: transparent #FFFFFF;
+	border-width: 4px 18px 4px 0;
+	margin-top: -4px;
+	left: -18px;
+	top: 70%;
+}
+.bubbleLeftBottom:before {
+	border-color: transparent #7F7F7F;
 	border-width: 6px 20px 6px 0;
 	margin-top: -6px;
 	left: -23px;
 	top: 70%;
 }
-.bubbleBottomRight:after {
+.bubbleRightTop:after {
+	border-color: transparent #FFFFFF;
+	border-width: 4px 0 4px 18px;
+	margin-top: -4px;
+	right: -18px;
+	top: 30%;
+}
+.bubbleRightTop:before {
+	border-color: transparent #7F7F7F;
+	border-width: 6px 0 6px 20px;
+	margin-top: -6px;
+	right: -23px;
+	top: 30%;
+}
+.bubbleRightBottom:after {
+	border-color: transparent #FFFFFF;
 	border-width: 4px 0 4px 18px;
 	margin-top: -4px;
 	right: -18px;
 	top: 70%;
 }
-.bubbleBottomRight:before {
+.bubbleRightBottom:before {
+	border-color: transparent #7F7F7F;
 	border-width: 6px 0 6px 20px;
 	margin-top: -6px;
 	right: -23px;
