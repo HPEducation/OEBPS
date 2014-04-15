@@ -99,6 +99,99 @@ section, article, aside, footer, header, nav, hgroup {
 	height: 650px;
 }
 
+.transcriptWrapper {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 0px;
+}
+
+.transcriptInnerWrapper, .transcriptInnerWrapper2 {
+	position: relative;
+	width: 1168px;
+	height: 0px;
+	margin: 0 auto;
+	top: 0px;
+}
+
+.transcriptInnerWrapper2 {
+	height: 650px;
+	overflow: hidden;
+}
+
+.outOfBox {
+	height: 100%;
+}
+
+.transcriptPanelBox {
+	position: absolute;
+	top: 650px;
+	height: 245px;/*height without padding*/
+	padding: 55px 20px 20px 20px;
+	background: rgba(0, 0, 0, .9);
+	color: white;
+	font-size: 2.0em;
+	transition: top .3s ease-out;
+}
+
+.transcriptPanelBox.show {
+	top: 330px; /*ttl height, height + padding = this*/
+}
+
+.transcriptPanelBox .closebtn {
+	position: absolute;
+	right: 14px;
+	top: 15px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.transcriptPanelBox .transcriptContent {
+	overflow: auto;
+	height: inherit;
+	padding-right: 5px;
+}
+
+.transcriptbtntoggle {
+	background: #ccc;
+	-moz-box-shadow:    0px 2px 7px 0 rgba(0, 0, 0, .7);
+	-webkit-box-shadow: 0px 2px 7px 0 rgba(0, 0, 0, .7);
+	box-shadow:         0px 2px 7px 0 rgba(0, 0, 0, .7);
+	color: black;
+	width: 80px;
+	height: 15px;
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* remove below if not showing text on global */
+.transcriptbtntoggle.globalLabel:before {
+	font-size: 12px;
+	content: "Transcript";
+}
+
+.transcriptbtntoggle.globalLabel {
+	overflow: hidden;
+}
+
+.transcriptbtntoggle.globalpos {
+	position: absolute;
+	top: 600px;
+	right: 20px;
+}
+
 .header, header {
 	margin-top:-20px;
 	display: table;

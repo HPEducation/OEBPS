@@ -262,3 +262,7 @@ function stopVideo2 () {
 
 	lib.videoStopped();
 }
+
+var transcriptJS = document.createElement('script');
+transcriptJS.src = '../global_assets/lib/transcript.js';
+document.head.appendChild(transcriptJS);
