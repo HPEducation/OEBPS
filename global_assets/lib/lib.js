@@ -263,6 +263,14 @@ function stopVideo2 () {
 	lib.videoStopped();
 }
 
+$(document).ready (function () {
+	$("img").each(function () {
+		if (typeof $(this).attr("width") === "undefined" && $(this).css("width") == "0px" && $(this).css("max-width") == "none") {
+			$(this).addClass("imgForceMaxNone");
+		}
+	})
+});
+
 var transcriptJS = document.createElement('script');
 transcriptJS.src = '../global_assets/lib/transcript.js';
 document.head.appendChild(transcriptJS);

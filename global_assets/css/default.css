@@ -46,6 +46,11 @@ img {
 	display: block;
 }
 
+.imgForceMaxNone {
+	max-height: none !important;
+	max-width: none !important;
+}
+
 .center {
 	margin-left:auto;
 	margin-right:auto;	
@@ -86,10 +91,11 @@ section, article, aside, footer, header, nav, hgroup {
 	background:url('../images/mainBG.jpg') no-repeat left top;
 	width: 1128px; /* 1168px total with padding */
 	/*height:650px; do we need to set this? probably not if page gonna scroll */
-	min-height: 610px;
+	height: 610px;
 	margin: 0 auto;
 	padding: 20px; /* set main padding */
 	position: relative;
+	overflow: hidden;
 	/*min-height:960px;*/
 }
 
@@ -223,6 +229,10 @@ section, article, aside, footer, header, nav, hgroup {
 	padding-top: 20px;
 	position:relative;
 	font-size: 2.4em;
+}
+
+.nohead {
+	padding-top: 0;
 }
 
 .justify { 
