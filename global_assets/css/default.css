@@ -1,4 +1,4 @@
-/* last edited by Jin on 2014.01.22 */
+/* last edited by Jin on 2014.04.29 */
 
 @charset "utf-8";
 
@@ -207,7 +207,7 @@ section, article, aside, footer, header, nav, hgroup {
 	height: 70px;
 }
 
-.wrapper > .header > * {
+.wrapper > .header > *, .wrapper > header > * {
 	display: table-cell;
 	vertical-align: middle;
 }

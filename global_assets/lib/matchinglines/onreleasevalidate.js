@@ -88,7 +88,9 @@ function initLines (id, arguments) {
 	}*/
 
 	var t = 0;
-	$("body").prepend('<div id="lw_' + id.substring(1) + '" style="position:absolute; width:100%; height:100%; margin:0; padding:0; left:0px; top:0px;"></div>');
+	var offset = $(".wrapper").offset();
+
+	$(".wrapper").prepend('<div id="lw_' + id.substring(1) + '" style="position:absolute; margin:0; padding:0;' + ' left:-' + offset.left + 'px; top:-' + offset.top + 'px;"></div>');
 	$(id + " .connector").each(function() {
 		var a = $(this).data("ans");
 		$(this).data("set", id);
