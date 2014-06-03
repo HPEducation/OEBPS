@@ -64,7 +64,7 @@ img {
 }
 
 h1 {
-	font-size: 3.2em !important;
+	font-size: 32px !important;
 	font-weight: 700 !important;
 	color:white;
 	margin-top: 0;
@@ -137,7 +137,7 @@ section, article, aside, footer, header, nav, hgroup {
 	width: 1128px;
 	background: rgba(0, 0, 0, .9);
 	color: white;
-	font-size: 2.0em;
+	font-size: 20px;
 	transition: top .3s ease-out;
 }
 
@@ -228,7 +228,7 @@ section, article, aside, footer, header, nav, hgroup {
 	/* max height = 650px - header 70px - bottom padding 20px - padding top 20px = 540px */
 	padding-top: 20px;
 	position:relative;
-	font-size: 2.4em;
+	font-size: 24px;
 }
 
 .nohead {
@@ -427,6 +427,7 @@ table.congrats {
 	width: 100%;
 	height: 100%;
 	background:#ff6666;
+	font-size: 10px;
 }
 
 table.congrats td {

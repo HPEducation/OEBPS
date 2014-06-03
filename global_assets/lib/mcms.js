@@ -1,11 +1,37 @@
 ﻿/*
   mcms.js
   MCMS Compatibility JavaScript Library for ePUB 3.0 Content
-  Version: 1.1
-  Last Updated On: 28 March 2013
+  Version: 1.21
+  Last Updated On: 21 May 2014 (by Veev)
   Created and maintained by Lewis Yang (lewisyang@stee.stengg.com)
   Copyright (C) 2012-2013 ST Electronics (Training & Simulation Systems) Pte Ltd. All rights reserved.
 */
+
+/*
+  Screen resolution detection/zoom
+  Last Updated On: 21 May 2013
+  Added by VEEV
+*/
+window.addEventListener("load", function() { screenload();});
+function screenload()
+{
+	if(navigator.userAgent.match(/Android/i))
+	{
+		//code for Android here 
+	}
+	else
+	{
+        if (screen.width == "1366")
+        {                             
+            document.body.style.zoom = "1.0";
+        }
+        else if (screen.width == "1280")
+        {
+            document.body.style.zoom = "0.9";
+        }
+	}
+}
+/* End of Screen resolution detection/zoom */
 
 var mcms_video_loop = false;
 var mcms_video_file = null;
@@ -72,16 +98,16 @@ function playVideoOnce(file,x,y,width,height) {
 		stopVideo();
 		var video = document.createElement('video');
 		video.id = 'mcms_video';
-		video.style.position = 'absolute';
+		video.controls = 'true';  //added by Jennifer Chua (12 Feb 2014)
+		video.style.position = 'absolute'; 
 		video.style.top = y + 'px';
 		video.style.left = x + 'px';
 		video.style.width = width + 'px';
 		video.style.height = height + 'px';
 		video.style.backgroundColor = 'black';
 		document.body.appendChild(video);
-		//video.addEventListener("click", stopVideo, false);
+		//video.addEventListener("click", stopVideo, false); //removed by Jennifer Chua (12 Feb 2014)
 		video.src = file;
-		video.controls = true;
 		video.load();
 		video.play()
 	} else {
@@ -92,6 +118,7 @@ function playVideoOnce(file,x,y,width,height) {
 		}
 		obj = document.createElement('div');
 		obj.id = 'mcms_video';
+		obj.controls = 'true';  //added by Jennifer Chua (12 Feb 2014)
 		obj.style.position = 'absolute';
 		obj.style.display = 'block';
 		obj.style.top = y + 'px';
@@ -134,9 +161,8 @@ function playVideoLoop(file,x,y,width,height) {
 		video.style.height = height + 'px';
 		video.style.backgroundColor = 'black';
 		document.body.appendChild(video);
-		video.addEventListener("ended", replayVideo, false);			
+		video.addEventListener("ended", replayVideo, false);
 		video.src = file;
-		video.controls = true;
 		video.load();
 		video.play()
 	} else {
@@ -155,7 +181,7 @@ function playVideoLoop(file,x,y,width,height) {
 		obj.style.height = height + 'px';
 		obj.style.backgroundColor = 'black';
 		document.body.appendChild(obj);
-		//obj.addEventListener("click", enterFullscreenVideo, false);
+		//obj.addEventListener("click", enterFullscreenVideo, false); 
 		//--- play video in MCMS
 		//UIWebView.playVideoLoop(String videoURL, final int x, final int y, final int width, final int height);
 		UIWebView.playVideoLoop(file,x,y,width,height);
@@ -177,6 +203,7 @@ function stopVideo() {
 
 function enterFullscreenVideo() {
 	var video = document.getElementById('mcms_video');
+
 	if (video != undefined) {
 		// do nothing
 	}

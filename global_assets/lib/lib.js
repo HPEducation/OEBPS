@@ -225,7 +225,72 @@ function playVideo (path, obj) {
 	}, false);
 	video.addEventListener("ended", function() {
 		lib.videoEnded();
+		if (typeof obj.fullscreen !== "undefined" && typeof obj.onVideoEndExitFullscreen !== "undefined") {
+			if (obj.fullscreen) {
+				if (isUIWebView) {
+
+				} else {
+					if (obj.onVideoEndExitFullscreen) exitFullScreen(video);
+				}
+			}
+		}
 	}, false);
+
+	if (typeof obj.fullscreen !== "undefined") {
+		if (obj.fullscreen) {
+			if (isUIWebView) {
+				enterFullscreenVideo();
+			} else {
+				//set the iframe holding the epub to allow fullscreen
+				$("#epubContentIframe", window.parent.document).attr("allowfullscreen", "allowfullscreen");
+				doFullScreen(video);
+			}
+		}
+	}
+}
+
+function doFullScreen(ele) {
+
+	var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !==     null) ||    // alternative standard method  
+			(document.mozFullScreen || document.webkitIsFullScreen);
+
+	var docElm = ele;
+	if (!isInFullScreen) {
+
+		if (docElm.requestFullscreen) {
+			docElm.requestFullscreen();
+		}
+		else if (docElm.mozRequestFullScreen) {
+			docElm.mozRequestFullScreen();
+			//alert("Mozilla entering fullscreen!");
+		}
+		else if (docElm.webkitRequestFullScreen) {
+			docElm.webkitRequestFullScreen();
+			//alert("Webkit entering fullscreen!");
+		}
+	}
+}
+
+function exitFullScreen (ele) {
+
+	var isInFullScreen = (document.fullScreenElement && document.fullScreenElement !==     null) ||    // alternative standard method  
+			(document.mozFullScreen || document.webkitIsFullScreen);
+
+	var docElm = ele;
+	if (isInFullScreen) {
+
+		if (docElm.exitFullscreen) {
+			docElm.exitFullscreen();
+		}
+		else if (docElm.mozCancelFullscreen) {
+			docElm.mozCancelFullscreen();
+			//alert("Mozilla entering fullscreen!");
+		}
+		else if (docElm.webkitExitFullScreen) {
+			docElm.webkitExitFullScreen();
+			//alert("Webkit entering fullscreen!");
+		}
+	}
 }
 
 function videoSeekToTime (t) {
