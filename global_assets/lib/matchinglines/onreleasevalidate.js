@@ -16,27 +16,35 @@ if (typeof $.fn.classList === "undefined") {
 }
 
 function connect(lw, div1, div2, color, thickness) {
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	//var zoomPercent = $("body").css("zoom") * 100;
+	//var offsetFactor = zoomPercent;
+
 	var off1 = getOffset(div1);
 	var off2 = getOffset(div2);
-    var scrollLeft = $(window).scrollLeft();
-	var scrollTop = $(window).scrollTop();
-    // bottom right
-    var x1 = off1.left + (off1.width/2) + scrollLeft;
-    var y1 = off1.top + (off1.height/2) + scrollTop;
-    // top right
-    var x2 = off2.left + (off2.width/2) + scrollLeft;
-    var y2 = off2.top + (off2.height/2) + scrollTop;
-    // distance
-    var length = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
-    // center
-    var cx = ((x1 + x2) / 2) - (length / 2);
-    var cy = ((y1 + y2) / 2) - (thickness / 2);
-    // angle
-    var angle = Math.atan2((y1-y2),(x1-x2))*(180/Math.PI);
-    // make holder
-    var htmlLine = "<div class='" + div1.id + " " + div2.id + "' style='padding:0px; margin:0px; height:" + thickness + "px; background-color:" + color + "; line-height:1px; position:absolute; left:" + cx + "px; top:" + cy + "px; width:" + length + "px; -moz-transform:rotate(" + angle + "deg); -webkit-transform:rotate(" + angle + "deg); -o-transform:rotate(" + angle + "deg); -ms-transform:rotate(" + angle + "deg); transform:rotate(" + angle + "deg);' />";
-    //
-    //alert(htmlLine);
+	//var scrollLeft = $(window).scrollLeft() * offsetFactor/100;
+	//var scrollTop = $(window).scrollTop() * offsetFactor/100;
+	var containerOffset = getOffset($("#"+lw).get(0));
+	//console.log("offset: " + containerOffset.left + " " + containerOffset.top);
+
+	// target
+	var x1 = off1.left + (off1.width/2) - containerOffset.left;
+	var y1 = off1.top + (off1.height/2) - containerOffset.top;
+	// origin
+	var x2 = off2.left + (off2.width/2) - containerOffset.left;
+	var y2 = off2.top + (off2.height/2) - containerOffset.top;
+	// distance
+	var length = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
+	// center
+	var cx = ((x1 + x2) / 2) - (length / 2);
+	var cy = ((y1 + y2) / 2) - (thickness / 2);
+	// angle
+	var angle = Math.atan2((y1-y2),(x1-x2))*(180/Math.PI);
+	// make holder
+	// make holder
+	var htmlLine = "<div class='" + div1.id + " " + div2.id + "' style='padding:0px; margin:0px; height:" + thickness + "px; background-color:" + color + "; line-height:1px; position:absolute; left:" + cx + "px; top:" + cy + "px; width:" + length + "px; -moz-transform:rotate(" + angle + "deg); -webkit-transform:rotate(" + angle + "deg); -o-transform:rotate(" + angle + "deg); -ms-transform:rotate(" + angle + "deg); transform:rotate(" + angle + "deg);' />";
+	//
+	//alert(htmlLine);
 	//document.body.innerHTML += htmlLine;
 	document.getElementById(lw).innerHTML += htmlLine;
 }
@@ -88,9 +96,9 @@ function initLines (id, arguments) {
 	}*/
 
 	var t = 0;
-	var offset = $(".wrapper").offset();
+	//var offset = $(".wrapper").offset();
 
-	$(".wrapper").prepend('<div id="lw_' + id.substring(1) + '" style="position:absolute; margin:0; padding:0;' + ' left:-' + offset.left + 'px; top:-' + offset.top + 'px;"></div>');
+	$(".wrapper").prepend('<div id="lw_' + id.substring(1) + '" style="position:absolute; margin:0; padding:0;' + ' left:' + 0 + 'px; top:' + 0 + 'px;"></div>');
 	$(id + " .connector").each(function() {
 		var a = $(this).data("ans");
 		$(this).data("set", id);

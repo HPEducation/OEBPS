@@ -158,7 +158,8 @@ function getLTWH (obj) {
 }
 
 function dragdrop_mousedown(event) {
-	
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	var zoomPercent = $("body").css("zoom") * 100;
 	//--- find the event object
 	var evt = event || window.event;
 	if (evt == null) return;
@@ -197,14 +198,16 @@ function dragdrop_mousedown(event) {
 	dragdrop_obj.style.position = 'absolute';
 	dragdrop_obj.style.top = ltwh.top + 'px';
 	dragdrop_obj.style.left = ltwh.left + 'px';
+	//console.log("left: " + ltwh.left +  " " + dragdrop_obj.style.left);
+	//console.log("top: " + ltwh.top +  " " + dragdrop_obj.style.top);
 	//dragdrop_obj.style.width = ltwh.width + 'px';
 	//dragdrop_obj.style.height = ltwh.height + 'px';
 	//dragdrop_obj.style.cursor = 'pointer';
 	dragdrop_obj.style.zIndex = 2000;
 	
 	//--- record initial drag-drop location
-	dragdrop_obj.setAttribute('iniX', evt.clientX);
-	dragdrop_obj.setAttribute('iniY', evt.clientY);
+	dragdrop_obj.setAttribute('iniX', (evt.clientX/zoomPercent)*100);
+	dragdrop_obj.setAttribute('iniY', (evt.clientY/zoomPercent)*100);
 	dragdrop_obj.setAttribute('iniTop', ltwh.top);
 	dragdrop_obj.setAttribute('iniLeft', ltwh.left);
 
@@ -228,6 +231,8 @@ function dragdrop_mousedown(event) {
 
 function dragdrop_touchstart(event) {
 	//debugMsg("touchstart evt: " + event.type + " " + $(event.target).html());
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	var zoomPercent = $("body").css("zoom") * 100;
 	//--- find the event object
 	var evt = event || window.event;
 	if (evt == null) return;
@@ -278,8 +283,8 @@ function dragdrop_touchstart(event) {
 	dragdrop_x = touch.pageX;
 	dragdrop_y = touch.pageY;
 	//debugMsg("x,y: " + dragdrop_x + ", " + dragdrop_y)
-	dragdrop_obj.setAttribute('iniX', dragdrop_x);
-	dragdrop_obj.setAttribute('iniY', dragdrop_y);
+	dragdrop_obj.setAttribute('iniX', (dragdrop_x/zoomPercent)*100);
+	dragdrop_obj.setAttribute('iniY', (dragdrop_y/zoomPercent)*100);
 	dragdrop_obj.setAttribute('iniTop', ltwh.top);
 	dragdrop_obj.setAttribute('iniLeft', ltwh.left);
 
@@ -304,6 +309,8 @@ function dragdrop_touchstart(event) {
 
 function dragdrop_mousemove(event) {
 	//debugMsg("dragging: " + $(event.target).html());
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	var zoomPercent = $("body").css("zoom") * 100;
 
 	//--- find the event object
 	var evt = event || window.event;
@@ -312,14 +319,20 @@ function dragdrop_mousemove(event) {
 	if (dragdrop_obj == null) return;
 
 	//--- move the object
-	var xMoved = evt.clientX - parseInt(dragdrop_obj.getAttribute('iniX'));
-	var yMoved = evt.clientY - parseInt(dragdrop_obj.getAttribute('iniY'));
+	var xMoved = ((evt.clientX/zoomPercent)*100) - parseInt(dragdrop_obj.getAttribute('iniX'));
+	var yMoved = ((evt.clientY/zoomPercent)*100) - parseInt(dragdrop_obj.getAttribute('iniY'));
+	//console.log("moved:" + xMoved + " " + yMoved);
+	//var xMoved = evt.clientX - parseInt(dragdrop_obj.getAttribute('iniX'));
+	//var yMoved = evt.clientY - parseInt(dragdrop_obj.getAttribute('iniY'));
+	//console.log(evt.clientX + " " + evt.clientY);
 	dragdrop_obj.style.left = (parseInt(dragdrop_obj.getAttribute('iniLeft')) + xMoved) + 'px';
 	dragdrop_obj.style.top = (parseInt(dragdrop_obj.getAttribute('iniTop')) + yMoved) + 'px';
 }
 
 function dragdrop_touchmove(event) {
 	//debugMsg("touch dragging: " + $(event.target).html());
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	var zoomPercent = $("body").css("zoom") * 100;
 
 	//--- find the event object
 	var evt = event || window.event;
@@ -331,14 +344,15 @@ function dragdrop_touchmove(event) {
 	var touch = evt.touches[0];
 	dragdrop_x = touch.pageX;
 	dragdrop_y = touch.pageY;
-	var xMoved = dragdrop_x - parseInt(dragdrop_obj.getAttribute('iniX'));
-	var yMoved = dragdrop_y - parseInt(dragdrop_obj.getAttribute('iniY'));
+	var xMoved = ((dragdrop_x/zoomPercent) * 100) - parseInt(dragdrop_obj.getAttribute('iniX'));
+	var yMoved = ((dragdrop_y/zoomPercent) * 100) - parseInt(dragdrop_obj.getAttribute('iniY'));
 	dragdrop_obj.style.left = (parseInt(dragdrop_obj.getAttribute('iniLeft')) + xMoved) + 'px';
 	dragdrop_obj.style.top = (parseInt(dragdrop_obj.getAttribute('iniTop')) + yMoved) + 'px';
 }
 
 function dragdrop_mouseup(event) {
-
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	var zoomPercent = $("body").css("zoom") * 100;
 	//--- find the event object
 	var evt = event || window.event;
 	if (evt == null) return;
@@ -350,13 +364,14 @@ function dragdrop_mouseup(event) {
 	document.removeEventListener('mouseup', dragdrop_mouseup, true);
 
 	//--- check if drop target is valid (className contains 'dropHere')
-	var x = evt.clientX;
-	var y = evt.clientY;
+	var x = (evt.clientX/zoomPercent) * 100;
+	var y = (evt.clientY/zoomPercent) * 100;
 	dragdrop_finished(x, y);
 }
 
 function dragdrop_touchend(event) {
-
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	var zoomPercent = $("body").css("zoom") * 100;
 	//--- find the event object
 	var evt = event || window.event;
 	if (evt == null) return;
@@ -369,10 +384,15 @@ function dragdrop_touchend(event) {
 	document.removeEventListener('touchcancel', dragdrop_touchend, true);
 
 	//--- check if drop target is valid (className contains 'dropHere')
-	dragdrop_finished(dragdrop_x, dragdrop_y);
+	var x = (dragdrop_x/zoomPercent) * 100;
+	var y = (dragdrop_y/zoomPercent) * 100;
+	dragdrop_finished(x, y);
 }
 
 function dragdrop_finished(x, y) {
+	//debugMsg("dragging: " + $(event.target).html());
+	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
+	var zoomPercent = $("body").css("zoom") * 100;
 	var top, left, width, height;
 	var targets = document.getElementsByTagName('div');
 	var target = null;
@@ -390,8 +410,8 @@ function dragdrop_finished(x, y) {
 		height = getHeight(targets[i]);
 
 		if (!isMobile) {
-			top -= scrollTop;
-			left -= scrollLeft;
+			top -= (scrollTop/zoomPercent) * 100;
+			left -= (scrollLeft/zoomPercent) * 100;
 		}
 
 		if (x >= left && x <= (left + width) && y >= top && y <= (top + height)) {

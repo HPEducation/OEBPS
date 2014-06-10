@@ -328,6 +328,36 @@ function stopVideo2 () {
 	lib.videoStopped();
 }
 
+function getVendorPrefix () {
+	var prefix = (function () {
+		var styles = window.getComputedStyle(document.documentElement, ''),
+		pre = (Array.prototype.slice
+			.call(styles)
+			.join('') 
+			.match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
+		)[1],
+		dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
+		return {
+			dom: dom,
+			lowercase: pre,
+			css: '-' + pre + '-',
+			js: pre[0].toUpperCase() + pre.substr(1)
+		};
+	})();
+	return prefix;
+}
+
+function getElementScale(elem) {
+	var transform = /matrix\([^\)]+\)/.exec(window.getComputedStyle(elem)[getVendorPrefix().css+'transform']),
+		scale = {'x': 1, 'y': 1};
+	if( transform ) {
+		transform = transform[0].replace('matrix(', '').replace(')', '').split(', ');
+		scale.x = parseFloat(transform[0]);
+		scale.y = parseFloat(transform[3]);
+	}
+	return scale;
+}
+
 $(document).ready (function () {
 	$("img").each(function () {
 		if (typeof $(this).attr("width") === "undefined" && $(this).css("width") == "0px" && $(this).css("max-width") == "none") {

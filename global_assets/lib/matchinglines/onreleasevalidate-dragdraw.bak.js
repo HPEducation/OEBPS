@@ -20,39 +20,32 @@ if (typeof $.fn.classList === "undefined") {
 }
 
 function connect(lw, div1, div2, color, thickness, temp) {
-	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
-	//var zoomPercent = $("body").css("zoom") * 100;
-	//var offsetFactor = zoomPercent;
-
 	var off1 = getOffset(div1);
 	var off2 = getOffset(div2);
-	//var scrollLeft = $(window).scrollLeft() * offsetFactor/100;
-	//var scrollTop = $(window).scrollTop() * offsetFactor/100;
-	var containerOffset = getOffset($("#"+lw).get(0));
-	//console.log("offset: " + containerOffset.left + " " + containerOffset.top);
+	var scrollLeft = $(window).scrollLeft();
+	var scrollTop = $(window).scrollTop();
+	// bottom right
+    var x1 = off1.left + (off1.width/2) + scrollLeft;
+    var y1 = off1.top + (off1.height/2) + scrollTop;
+    // top right
+    var x2 = off2.left + (off2.width/2) + scrollLeft;
+    var y2 = off2.top + (off2.height/2) + scrollTop;
+    // distance
+    var length = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
+    // center
+    var cx = ((x1 + x2) / 2) - (length / 2);
+    var cy = ((y1 + y2) / 2) - (thickness / 2);
+    // angle
+    var angle = Math.atan2((y1-y2),(x1-x2))*(180/Math.PI);
+    // make holder
 
-	// target
-	var x1 = off1.left + (off1.width/2) - containerOffset.left;
-	var y1 = off1.top + (off1.height/2) - containerOffset.top;
-	// origin
-	var x2 = off2.left + (off2.width/2) - containerOffset.left;
-	var y2 = off2.top + (off2.height/2) - containerOffset.top;
-	// distance
-	var length = Math.sqrt(((x2-x1) * (x2-x1)) + ((y2-y1) * (y2-y1)));
-	// center
-	var cx = ((x1 + x2) / 2) - (length / 2);
-	var cy = ((y1 + y2) / 2) - (thickness / 2);
-	// angle
-	var angle = Math.atan2((y1-y2),(x1-x2))*(180/Math.PI);
-	// make holder
-
-	if (temp) {
-		var htmlLine = "<div id='templine' class='" + div1.id + " " + div2.id + "' style='padding:0px; margin:0px; height:" + thickness + "px; background-color:" + color + "; line-height:1px; position:absolute; left:" + cx + "px; top:" + cy + "px; width:" + length + "px; -moz-transform:rotate(" + angle + "deg); -webkit-transform:rotate(" + angle + "deg); -o-transform:rotate(" + angle + "deg); -ms-transform:rotate(" + angle + "deg); transform:rotate(" + angle + "deg);' />";
-	} else {
-		var htmlLine = "<div class='" + div1.id + " " + div2.id + "' style='padding:0px; margin:0px; height:" + thickness + "px; background-color:" + color + "; line-height:1px; position:absolute; left:" + cx + "px; top:" + cy + "px; width:" + length + "px; -moz-transform:rotate(" + angle + "deg); -webkit-transform:rotate(" + angle + "deg); -o-transform:rotate(" + angle + "deg); -ms-transform:rotate(" + angle + "deg); transform:rotate(" + angle + "deg);' />";
-	}
-	//
-	//alert(htmlLine);
+    if (temp) {
+    	var htmlLine = "<div id='templine' class='" + div1.id + " " + div2.id + "' style='padding:0px; margin:0px; height:" + thickness + "px; background-color:" + color + "; line-height:1px; position:absolute; left:" + cx + "px; top:" + cy + "px; width:" + length + "px; -moz-transform:rotate(" + angle + "deg); -webkit-transform:rotate(" + angle + "deg); -o-transform:rotate(" + angle + "deg); -ms-transform:rotate(" + angle + "deg); transform:rotate(" + angle + "deg);' />";
+    } else {
+    	var htmlLine = "<div class='" + div1.id + " " + div2.id + "' style='padding:0px; margin:0px; height:" + thickness + "px; background-color:" + color + "; line-height:1px; position:absolute; left:" + cx + "px; top:" + cy + "px; width:" + length + "px; -moz-transform:rotate(" + angle + "deg); -webkit-transform:rotate(" + angle + "deg); -o-transform:rotate(" + angle + "deg); -ms-transform:rotate(" + angle + "deg); transform:rotate(" + angle + "deg);' />";
+    }
+    //
+    //alert(htmlLine);
 	//document.body.innerHTML += htmlLine;
 	document.getElementById(lw).innerHTML += htmlLine;
 }
@@ -99,9 +92,6 @@ function enableConnectors (id, b) {
 
 function initLines (id, arguments) {
 	debugMsg("init: " + id);
-	//var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
-	//var zoomPercent = $("body").css("zoom") * 100;
-	//var offsetFactor = 100;
 	/*try {
 		disableScroll();
 	} catch (err) {
@@ -112,9 +102,9 @@ function initLines (id, arguments) {
 	$(id).on('selectstart', false);
 
 	var t = 0;
-	//var offset = $(".wrapper").offset();
+	var offset = $(".wrapper").offset();
 
-	$(".wrapper").prepend('<div id="lw_' + id.substring(1) + '" style="position:absolute; margin:0; padding:0;' + ' left:' + 0 + 'px; top:' + 0 + 'px;"></div>');
+	$(".wrapper").prepend('<div id="lw_' + id.substring(1) + '" style="position:absolute; margin:0; padding:0;' + ' left:-' + offset.left + 'px; top:-' + offset.top + 'px;"></div>');
 	$(id + " .connector").each(function() {
 		var a = $(this).data("ans");
 		$(this).data("set", id);
@@ -275,9 +265,6 @@ function validate (e) {
 
 function dragdrop_mousemove(event) {
 	//debugMsg("dragging: " + $(event.target).html());
-	var scalePercent = parseFloat(getElementScale($("html")[0]).x) * 100;
-	var zoomPercent = $("body").css("zoom") * 100;
-	var offsetFactor = zoomPercent;
 
 	//--- find the event object
 	var evt = event || window.event;
@@ -287,20 +274,19 @@ function dragdrop_mousemove(event) {
 
 	//--- move the object
 	if (!isMobile) {
-		var xMoved = ((evt.clientX + $(window).scrollLeft())/offsetFactor) * 100;
-		var yMoved = ((evt.clientY + $(window).scrollTop())/offsetFactor) * 100;
+		var xMoved = evt.clientX + $(window).scrollLeft();
+		var yMoved = evt.clientY + $(window).scrollTop();
 	} else {
 		var touch = evt.touches[0];
 		//debugMsg("touches: " + evt.originalEvent.touches[0] + ", touch id: " + touch);
-		var xMoved = ((touch.pageX + $(window).scrollLeft())/offsetFactor) * 100;
-		var yMoved = ((touch.pageY + $(window).scrollTop())/offsetFactor) * 100;
+		var xMoved = touch.pageX;
+		var yMoved = touch.pageY;
 	}
 	
-	var mySet = selectedConnector.data("set").substring(1);
-	//var offset = $("#lw_"+mySet).offset();
-
 	dragdrop_obj.style.left = xMoved + 'px';
 	dragdrop_obj.style.top = yMoved + 'px';
+
+	var mySet = selectedConnector.data("set").substring(1);
 
 	//remove old line
 	$('#templine').remove();
@@ -309,13 +295,13 @@ function dragdrop_mousemove(event) {
 	connect("lw_"+mySet, dragdrop_obj, selectedConnector.get(0), $("#"+mySet).data("lineColor"), parseFloat($("#"+mySet).data("lineThickness")), true);
 
 	if (!isMobile) {
-		dragdropx = ((evt.clientX + $(window).scrollLeft())/offsetFactor) * 100;
-		dragdropy = ((evt.clientY + $(window).scrollTop())/offsetFactor) * 100;
+		dragdropx = evt.clientX + $(window).scrollLeft();
+		dragdropy = evt.clientY + $(window).scrollTop();
 	} else {
 		var touch = evt.touches[0];
 		//debugMsg("touches: " + evt.originalEvent.touches[0] + ", touch id: " + touch);
-		dragdropx = ((touch.pageX + $(window).scrollLeft())/offsetFactor) * 100;
-		dragdropy = ((touch.pageY + $(window).scrollTop())/offsetFactor) * 100;
+		dragdropx = touch.pageX;
+		dragdropy = touch.pageY;
 	}
 }
 
