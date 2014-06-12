@@ -79,7 +79,7 @@ function enableConnectors (id, b) {
 				$(this).on('mousedown touchstart', function(e) {
 					//debugMsg("Sel: " + this.id);
 					e.stopPropagation();
-					selectConnector($(this));
+					selectConnector($(this), e);
 				});
 				/*$(this).on('mouseup touchend touchcancel', function(e) {
 					debugMsg("up: " + this.id);
@@ -169,10 +169,10 @@ function resetLines (id) {
 }
 
 
-function selectConnector (e) {
-	//debugMsg("Sel: " + e + " - " + selectedConnector)
-	selectedConnector = e;
-	e.addClass("activeconnector");
+function selectConnector (ele, event) {
+	//debugMsg("Sel: " + ele + " - " + selectedConnector)
+	selectedConnector = ele;
+	ele.addClass("activeconnector");
 
 	dragdrop_obj = document.createElement('div');
 	dragdrop_obj = document.body.appendChild(dragdrop_obj);
@@ -184,11 +184,11 @@ function selectConnector (e) {
 	$("#temp_dragdrop").css("position", "absolute");
 	
 	//--- attach mousemove and mouseup listener to document
-	if (isMobile) {
+	if (event.type == "touchstart") {
 		document.addEventListener('touchend', dragdrop_mouseup, true);
 		document.addEventListener('touchcancel', dragdrop_mouseup, true);
 		document.addEventListener('touchmove', dragdrop_mousemove, true);
-	} else {
+	} else if (event.type == "mousedown") {
 		document.addEventListener('mouseup', dragdrop_mouseup, true);
 		document.addEventListener('mousemove', dragdrop_mousemove, true);
 	}
@@ -286,12 +286,12 @@ function dragdrop_mousemove(event) {
 	if (typeof dragdrop_obj === 'undefined') return;
 
 	//--- move the object
-	if (!isMobile) {
+	if (evt.type == "mousemove") {
 		var xMoved = ((evt.clientX + $(window).scrollLeft())/offsetFactor) * 100;
 		var yMoved = ((evt.clientY + $(window).scrollTop())/offsetFactor) * 100;
-	} else {
+	} else if (evt.type == "touchmove") {
 		var touch = evt.touches[0];
-		//debugMsg("touches: " + evt.originalEvent.touches[0] + ", touch id: " + touch);
+		//debugMsg("touches: " + evt.touches[0] + ", touch id: " + touch);
 		var xMoved = ((touch.pageX + $(window).scrollLeft())/offsetFactor) * 100;
 		var yMoved = ((touch.pageY + $(window).scrollTop())/offsetFactor) * 100;
 	}
@@ -308,15 +308,19 @@ function dragdrop_mousemove(event) {
 	//draw new line
 	connect("lw_"+mySet, dragdrop_obj, selectedConnector.get(0), $("#"+mySet).data("lineColor"), parseFloat($("#"+mySet).data("lineThickness")), true);
 
-	if (!isMobile) {
+	if (evt.type == "mousemove") {
 		dragdropx = ((evt.clientX + $(window).scrollLeft())/offsetFactor) * 100;
 		dragdropy = ((evt.clientY + $(window).scrollTop())/offsetFactor) * 100;
-	} else {
+	} else if (evt.type == "touchmove") {
 		var touch = evt.touches[0];
-		//debugMsg("touches: " + evt.originalEvent.touches[0] + ", touch id: " + touch);
+		//debugMsg("touches: " + evt.touches[0] + ", touch id: " + touch);
 		dragdropx = ((touch.pageX + $(window).scrollLeft())/offsetFactor) * 100;
 		dragdropy = ((touch.pageY + $(window).scrollTop())/offsetFactor) * 100;
 	}
+}
+
+window.onload = function () {
+	enableDebug(true);
 }
 
 function dragdrop_mouseup(event) {
@@ -330,11 +334,11 @@ function dragdrop_mouseup(event) {
 	setTimeout ( function () { prevConn.removeClass("activeconnector"); }, 300);
 
 	//--- remove listeners
-	if (isMobile) {
+	if (evt.type == "touchend") {
 		document.removeEventListener('touchend', dragdrop_mouseup, true);
 		document.removeEventListener('touchcancel', dragdrop_mouseup, true);
 		document.removeEventListener('touchmove', dragdrop_mousemove, true);
-	} else {
+	} else if (evt.type == "mouseup") {
 		document.removeEventListener('mouseup', dragdrop_mouseup, true);
 		document.removeEventListener('mousemove', dragdrop_mousemove, true);
 	}
