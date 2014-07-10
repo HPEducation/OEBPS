@@ -360,7 +360,8 @@ function getElementScale(elem) {
 
 $(document).ready (function () {
 	$("img").each(function () {
-		if (typeof $(this).attr("width") === "undefined" && $(this).css("width") == "0px" && $(this).css("max-width") == "none") {
+		//if (typeof $(this).attr("width") === "undefined" && $(this).css("width") == "0px" && $(this).css("max-width") == "none") {
+		if ($(this).css("max-width") == "none") {
 			$(this).addClass("imgForceMaxNone");
 		}
 	})
